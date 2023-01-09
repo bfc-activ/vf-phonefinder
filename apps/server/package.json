@@ -1,5 +1,6 @@
 {
-  "name": "activ-api",
+  "name": "phonefinder-api",
+  "author": "ACTIV Solutions Developers",
   "version": "0.0.0",
   "private": true,
   "scripts": {
