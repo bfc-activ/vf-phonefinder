@@ -18,8 +18,6 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
 // Listen to a port
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
-});
-
-module.exports = app;
+app.listen(3000, () =>
+  console.log("PhoneFinder API is listening on port 3000.")
+);
