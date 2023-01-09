@@ -1,0 +1,28 @@
+[
+  {
+    "questionId": "1",
+    "displayName": "Which games do you play on your phone?",
+    "options": [
+      {
+        "title": "Raid Shadow Legends",
+        "value": "raid-shadow-legends",
+        "image": "/img/raid.png"
+      },
+      {
+        "title": "Pokémon Go",
+        "value": "pokemon-go",
+        "image": "/img/pokemongo.png"
+      },
+      {
+        "title": "Hearthstone",
+        "value": "hearthstone",
+        "image": "/img/hearthstone.png"
+      },
+      {
+        "title": "PUBG Mobile",
+        "value": "pubg-mobile",
+        "image": "/img/pubg_mobile.png"
+      }
+    ]
+  }
+]
