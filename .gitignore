@@ -11,10 +11,11 @@ node_modules
 # testing
 coverage
 
-# next.js
+# react
 .next/
 out/
 build
+dist
 
 # misc
 .DS_Store
