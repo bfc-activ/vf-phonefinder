@@ -3,7 +3,7 @@ const router = express.Router();
 
 /* GET login. */
 router.post('/', function(req, res, next) {
-  res.send('POST /login');
+  res.send('NOT IMPLEMENTED');
 });
 
 module.exports = router;
