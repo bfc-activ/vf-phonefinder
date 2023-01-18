@@ -1,17 +1,13 @@
 import { Button, ButtonProps } from "@chakra-ui/react";
-import { useState } from "react";
-import LoginModal from "./LoginModal";
+import { Link } from "react-router-dom";
 
 const LoginButton = (props: ButtonProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <>
-      <Button onClick={() => setIsOpen(true)} {...props}>
+    <Link to="/login">
+      <Button variant="outline" colorScheme="gray">
         Login
       </Button>
-      <LoginModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
-    </>
+    </Link>
   );
 };
 

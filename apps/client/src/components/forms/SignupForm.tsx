@@ -12,12 +12,17 @@ import * as yup from "yup";
 
 const schema = yup
   .object({
+    displayName: yup.string().min(2).max(32).required(),
     email: yup.string().email().required(),
     password: yup.string().min(3).max(64).required(),
+    confirmPassword: yup
+      .string()
+      .oneOf([yup.ref("password"), null])
+      .required(),
   })
   .required();
 
-const LoginForm = () => {
+const SignupForm = () => {
   const {
     register,
     handleSubmit,
@@ -32,6 +37,17 @@ const LoginForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Stack spacing={4}>
+        <FormControl
+          variant="floating"
+          isInvalid={errors.displayName ? true : false}
+        >
+          <Input {...register("displayName")} placeholder=" " />
+          <FormLabel>Display name</FormLabel>
+          <FormErrorMessage>
+            {errors.displayName && errors.displayName.message}
+          </FormErrorMessage>
+        </FormControl>
+
         <FormControl variant="floating" isInvalid={errors.email ? true : false}>
           <Input {...register("email")} placeholder=" " />
           <FormLabel>Email address</FormLabel>
@@ -51,12 +67,24 @@ const LoginForm = () => {
           </FormErrorMessage>
         </FormControl>
 
+        <FormControl variant="floating" isInvalid={errors.confirmPassword}>
+          <Input
+            {...register("confirmPassword")}
+            placeholder=" "
+            type="password"
+          />
+          <FormLabel>Confirm password</FormLabel>
+          <FormErrorMessage>
+            {errors.confirmPassword && errors.confirmPassword.message}
+          </FormErrorMessage>
+        </FormControl>
+
         <Button type="submit" isDisabled={!isDirty}>
-          Login
+          Create account
         </Button>
       </Stack>
     </form>
   );
 };
 
-export default LoginForm;
+export default SignupForm;
