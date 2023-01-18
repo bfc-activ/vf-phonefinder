@@ -44,7 +44,7 @@ const SignupForm = () => {
           <Input {...register("displayName")} placeholder=" " />
           <FormLabel>Display name</FormLabel>
           <FormErrorMessage>
-            {errors.displayName && errors.displayName.message}
+            <>{errors.displayName && errors.displayName.message}</>
           </FormErrorMessage>
         </FormControl>
 
@@ -52,7 +52,7 @@ const SignupForm = () => {
           <Input {...register("email")} placeholder=" " />
           <FormLabel>Email address</FormLabel>
           <FormErrorMessage>
-            {errors.email && errors.email.message}
+            <>{errors.email?.message}</>
           </FormErrorMessage>
         </FormControl>
 
@@ -63,11 +63,14 @@ const SignupForm = () => {
           <Input {...register("password")} placeholder=" " type="password" />
           <FormLabel>Password</FormLabel>
           <FormErrorMessage>
-            {errors.password && errors.password.message}
+            <>{errors.password?.message}</>
           </FormErrorMessage>
         </FormControl>
 
-        <FormControl variant="floating" isInvalid={errors.confirmPassword}>
+        <FormControl
+          variant="floating"
+          isInvalid={errors.confirmPassword ? true : false}
+        >
           <Input
             {...register("confirmPassword")}
             placeholder=" "
@@ -75,7 +78,7 @@ const SignupForm = () => {
           />
           <FormLabel>Confirm password</FormLabel>
           <FormErrorMessage>
-            {errors.confirmPassword && errors.confirmPassword.message}
+            <>{errors.confirmPassword?.message}</>
           </FormErrorMessage>
         </FormControl>
 
