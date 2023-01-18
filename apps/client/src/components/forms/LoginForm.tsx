@@ -36,7 +36,7 @@ const LoginForm = () => {
           <Input {...register("email")} placeholder=" " />
           <FormLabel>Email address</FormLabel>
           <FormErrorMessage>
-            {errors.email && errors.email.message}
+            <>{errors.email?.message}</>
           </FormErrorMessage>
         </FormControl>
 
@@ -47,7 +47,7 @@ const LoginForm = () => {
           <Input {...register("password")} placeholder=" " type="password" />
           <FormLabel>Password</FormLabel>
           <FormErrorMessage>
-            {errors.password && errors.password.message}
+            <>{errors.password?.message}</>
           </FormErrorMessage>
         </FormControl>
 
