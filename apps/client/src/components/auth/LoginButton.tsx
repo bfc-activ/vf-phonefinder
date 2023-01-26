@@ -1,12 +1,10 @@
-import { Button, ButtonProps } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-const LoginButton = (props: ButtonProps) => {
+const LoginButton = () => {
   return (
     <Link to="/login">
-      <Button variant="outline" colorScheme="gray">
-        Login
-      </Button>
+      <Button variant="outline">Login</Button>
     </Link>
   );
 };

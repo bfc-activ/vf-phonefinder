@@ -1,7 +1,8 @@
-import { Box, Button, Heading } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading } from "@chakra-ui/react";
 import LoginForm from "@components/forms/LoginForm";
 import { Link } from "react-router-dom";
 
+// This is the Login page, containing the login form.
 const Login = () => {
   return (
     <Box mt={12} bg="gray.700" rounded="base" p={4}>
@@ -9,9 +10,14 @@ const Login = () => {
         Login
       </Heading>
       <LoginForm />
-      <Link to="/register">
-        <Button variant="link">Create an account</Button>
-      </Link>
+
+      <Flex justifyContent="center" mt={4}>
+        <Link to="/register">
+          <Button colorScheme="gray" variant="link">
+            Create an account
+          </Button>
+        </Link>
+      </Flex>
     </Box>
   );
 };

@@ -12,14 +12,8 @@ const makeServer = ({ environment = "development" } = {}) => {
       this.urlPrefix = "https://localhost:3001/api";
       this.timing = 600;
 
-      this.get("/questions/:questionId", (_schema, request) => {
-        const { questionId } = request.params;
-        const question = questions.find((q) => q.questionId === questionId);
-
-        if (!question) {
-          return new Response(404, {}, { message: "Question not found." });
-        }
-        return new Response(200, {}, { data: question });
+      this.get("/questions", () => {
+        return new Response(200, {}, { data: questions });
       });
 
       // Allow regular requests to pass through
