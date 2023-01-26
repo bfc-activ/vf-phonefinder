@@ -2,6 +2,7 @@ import initMirage from "./mirage/index";
 import { CurrentUserProvider } from "./hooks/useCurrentUser";
 import Fonts from "./components/layout/Fonts";
 import Router from "./Router";
+import { OnlineStatusProvider } from "@hooks/useOnlineStatus";
 
 const App = () => {
   // Initialise the Mirage.js Mocking Server.
@@ -9,8 +10,10 @@ const App = () => {
 
   return (
     <CurrentUserProvider>
-      <Fonts />
-      <Router />
+      <OnlineStatusProvider>
+        <Fonts />
+        <Router />
+      </OnlineStatusProvider>
     </CurrentUserProvider>
   );
 };
