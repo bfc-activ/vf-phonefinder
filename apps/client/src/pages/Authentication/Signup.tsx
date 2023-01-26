@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // This is the Signup component, which is a page that contains the SignupForm component.
 const Signup = () => {
   return (
-    <Box mt={12} bg="gray.700" rounded="base" p={4}>
+    <Box mt={12} bg="gray.50" _dark={{ bg: "gray.700" }} rounded="base" p={4}>
       <Heading fontSize="2xl" mb={4}>
         Sign up
       </Heading>

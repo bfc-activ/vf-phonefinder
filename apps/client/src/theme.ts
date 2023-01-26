@@ -56,7 +56,7 @@ const config = {
               zIndex: 2,
               position: "absolute",
               backgroundColor:
-                props.colorMode === "dark" ? "gray.700" : "white",
+                props.colorMode === "dark" ? "gray.700" : "gray.50",
               pointerEvents: "none",
               mx: 3,
               px: 1,

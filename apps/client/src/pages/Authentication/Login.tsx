@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // This is the Login page, containing the login form.
 const Login = () => {
   return (
-    <Box mt={12} bg="gray.700" rounded="base" p={4}>
+    <Box mt={12} bg="gray.50" _dark={{ bg: "gray.700" }} rounded="base" p={4}>
       <Heading fontSize="2xl" mb={4}>
         Login
       </Heading>
