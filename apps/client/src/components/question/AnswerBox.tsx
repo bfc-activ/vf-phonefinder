@@ -7,8 +7,8 @@ import {
   useRadio,
 } from "@chakra-ui/react";
 
-const OptionBox = (
-  props: ({ image: string; children: string } & UseRadioProps) | undefined
+const AnswerBox = (
+  props: ({ image?: string; children: string } & UseRadioProps) | undefined
 ) => {
   const { getInputProps, getCheckboxProps } = useRadio(props);
 
@@ -46,13 +46,16 @@ const OptionBox = (
         p={4}
       >
         <Flex direction="column" align="center">
-          <Image
-            rounded="md"
-            src={props?.image}
-            alt="Raid Shadow Legends"
-            width="100px"
-          />
-          <Heading mt={4} textAlign="center" size="sm">
+          {props?.image && (
+            <Image
+              rounded="md"
+              src={props?.image}
+              alt="Raid Shadow Legends"
+              width="100px"
+            />
+          )}
+
+          <Heading mt={props?.image && 4} textAlign="center" size="sm">
             {props?.children}
           </Heading>
         </Flex>
@@ -61,4 +64,4 @@ const OptionBox = (
   );
 };
 
-export default OptionBox;
+export default AnswerBox;

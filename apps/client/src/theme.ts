@@ -105,8 +105,13 @@ const config = {
     },
     Button: {
       baseStyle: {
-        transitionDuration: "0.1s",
-        fontWeight: "bold",
+        transition: "all 0.4s ease 0s;",
+        fontWeight: "semibold",
+        borderRadius: "4px",
+        padding: "16px 24px",
+        color: "white",
+        border: "2px solid transparent",
+        height: "44px",
       },
       defaultProps: {
         colorScheme: "brand",

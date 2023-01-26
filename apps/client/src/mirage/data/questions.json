@@ -1,28 +1,79 @@
 [
-  {
-    "questionId": "1",
-    "displayName": "Which games do you play on your phone?",
-    "options": [
-      {
-        "title": "Raid Shadow Legends",
-        "value": "raid-shadow-legends",
-        "image": "/img/raid.png"
-      },
-      {
-        "title": "Pokémon Go",
-        "value": "pokemon-go",
-        "image": "/img/pokemongo.png"
-      },
-      {
-        "title": "Hearthstone",
-        "value": "hearthstone",
-        "image": "/img/hearthstone.png"
-      },
-      {
-        "title": "PUBG Mobile",
-        "value": "pubg-mobile",
-        "image": "/img/pubg_mobile.png"
-      }
-    ]
-  }
+    {
+        "order": 1,
+        "title": "Which activities do you do on your phone?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "displayName": "Browsing emails",
+                "tagId": "5"
+            },
+            {
+                "displayName": "Playing games",
+                "tagId": "6"
+            },
+            {
+                "displayName": "Using web applications",
+                "tagId": "7"
+            },
+            {
+                "displayName": "Taking meetings",
+                "tagId": "8"
+            },
+            {
+                "displayName": "Watching videos",
+                "tagId": "9"
+            }
+        ]
+    },
+    {
+        "order": 2,
+        "title": "Which  mobile game do you play the most?",
+        "type": "single_choice",
+        "answers": [
+            {
+                "displayName": "Hearthstone",
+                "photoURL": "https://phonefinder-app-cki9t.ondigitalocean.app/img/hearthstone.png",
+                "tagId": "1"
+            },
+            {
+                "displayName": "Pokemon Go",
+                "photoURL": "https://phonefinder-app-cki9t.ondigitalocean.app/img/pokemongo.png",
+                "tagId": "2"
+            },
+            {
+                "displayName": "PUBG Mobile",
+                "photoURL": "https://phonefinder-app-cki9t.ondigitalocean.app/img/pubg_mobile.png",
+                "tagId": "3"
+            },
+            {
+                "displayName": "RAID: Shadow Legends",
+                "photoURL": "https://phonefinder-app-cki9t.ondigitalocean.app/img/raid.png",
+                "tagId": "4"
+            }
+        ]
+    },
+    {
+        "order": 3,
+        "title": "What is your budget for a new phone?",
+        "type": "slider",
+        "answers": [
+            {
+                "displayName": "Low Cost",
+                "tagId": "10"
+            },
+            {
+                "displayName": "Mid-Level",
+                "tagId": "11"
+            },
+            {
+                "displayName": "High-End",
+                "tagId": "12"
+            },
+            {
+                "displayName": "Premium",
+                "tagId": "13"
+            }
+        ]
+    }
 ]

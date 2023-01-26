@@ -5,6 +5,7 @@ import Question from "./pages/Question";
 import Home from "./pages/Home";
 import Login from "@pages/Authentication/Login";
 import Signup from "@pages/Authentication/Signup";
+import Conclusion from "@pages/Conclusion";
 
 const Router = () => {
   // Create a new React Router with the below routes.
@@ -26,7 +27,11 @@ const Router = () => {
           element: <Signup />,
         },
         {
-          path: "/question/1",
+          path: "/question/conclude",
+          element: <Conclusion />,
+        },
+        {
+          path: "/question/:id",
           element: <Question />,
         },
       ],
