@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 const AppShell = () => (
   <Box position="relative" minH="100vh">
     <Navbar />
-    <Container paddingBottom="4rem">
+    <Container paddingBottom="7rem">
       <Outlet />
     </Container>
     <Footer />
