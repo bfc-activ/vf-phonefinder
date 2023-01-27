@@ -1,0 +1,123 @@
+Table 1: 'tags'
+
+[
+  {
+    "_id": "auto_generated_mongo_id_here",
+    "displayName": "Watching Sports & TV"
+  },
+  {
+    "_id": "auto_generated_mongo_id_here",
+    "displayName": "Gaming"
+  },
+  {
+    "_id": "auto_generated_mongo_id_here",
+    "displayName": "£300 - £500"
+  },
+  {
+    "_id": "auto_generated_mongo_id_here",
+    "displayName": "£500 - £800"
+  },
+  {
+    "_id": "auto_generated_mongo_id_here",
+    "displayName": "£800 - £1300"
+  }
+]
+
+Tags Payload (end of Questionnare) from the Frontend to the Backend
+
+{
+  "tagIds": ["123", "345", "678"]
+}
+
+Table 2: 'phones'
+
+[
+  {
+    "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Apple_iPhone_14_Pro_deep_purple-full-product-front-600.png",
+    "displayName": "Apple iPhone 14 Pro",
+    "price": 1099,
+    "displayText": "OLED capacitive touchscreen, Super Retina XDR 2556 x 1179 pixels",
+    "is5GEnabled": true,
+    "hasWirelessCharging": true
+  }
+]
+
+Table 3: 'questions'
+
+[
+  {
+    "order": 1,
+    "title": "Which games do you play on your phone?",
+    "type": "single_choice",
+    "answers": [
+      {
+        "displayName": "Hearthstone",
+        "photoURL": "https://phonefinder-app-cki9t.ondigitalocean.app/img/hearthstone.png",
+        "tagId": "123"
+      }
+    ]
+  },
+  {
+    "order": 2,
+    "title": "Which games do you play on your phone?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "displayName": "Hearthstone",
+        "photoURL": "https://phonefinder-app-cki9t.ondigitalocean.app/img/hearthstone.png",
+        "tagId": "123"
+      }
+    ]
+  },
+  {
+    "order": 3,
+    "title": "Which games do you play on your phone?",
+    "type": "slider",
+    "answers": [
+      {
+        "displayName": "Basic & Low Cost",
+        "tagId": "123"
+      },
+      {
+        "displayName": "Mid-Level",
+        "tagId": "123"
+      }
+      {
+        "displayName": "High-End",
+        "tagId": "123"
+      }
+    ]
+  },
+]
+
+Table 4: 'surveys'
+
+[
+  {
+    "_id": "mongo_id",
+    "createdBy": "userId_here",
+    "createdAt": 403284092,
+    "tagIds": ["123", "123", "123"]
+  }
+]
+
+Table 5: 'users'
+
+[
+  {
+    "_id": "mongo_id",
+    "displayName": "Ingus",
+    "role": "admin",
+    "email": "ingus.jansons@vodafone.com",
+    "password": "pw_hash_here",
+    "latestSurveyId": "survey_id"
+  }
+  {
+    "_id": "mongo_id",
+    "displayName": "Ingus",
+    "role": "user",
+    "email": "ingus.jansons@vodafone.com",
+    "password": "pw_hash_here",
+    "latestSurveyId": "survey_id"
+  }
+]
