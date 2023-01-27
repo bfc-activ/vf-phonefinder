@@ -1,14 +1,17 @@
+// Module imports
 const app = require('./app')
+const mongoDB = require('./app/config/mongoose')
+
 const port = process.env.PORT || '3000'
 
-app.listen(port, () => {
-    console.log(`PhoneFinder API is listening on port ${port}.`)
+main().catch(error => {
+    console.error(error)
+    process.exit(1)
 })
 
-const mongoose = require("mongoose");
-
-main().catch((err) => console.log(err));
-
 async function main() {
-  await mongoose.connect(process.env.MONGO_URI)
+    await mongoDB.connect()
+    app.listen(port, () => console.log(`PhoneFinder API is listening on port ${port}`))
 }
+
+
