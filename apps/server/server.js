@@ -13,5 +13,3 @@ async function main() {
     await mongoDB.connect()
     app.listen(port, () => console.log(`PhoneFinder API is listening on port ${port}`))
 }
-
-
