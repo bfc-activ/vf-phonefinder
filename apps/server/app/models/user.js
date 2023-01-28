@@ -9,3 +9,5 @@ const UserSchema = new Schema({
     password: { type: String, required: true }, // TODO: encrypt this
     latestSurveyId: { type: String} // optional
 })
+
+module.exports = mongoose.model('user', UserSchema)
