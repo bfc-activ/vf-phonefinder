@@ -1,19 +1,15 @@
-import {
-  useState,
-  useContext,
-  createContext,
-  ReactNode,
-  useEffect,
-} from "react";
+import api from "../api";
+import { useState, useContext, createContext, ReactNode } from "react";
 
 interface ICurrentUser {
   currentUser: {
-    displayName: string;
+    name: string;
     email: string;
   } | null;
-  getCurrentUser: () => Promise<void>;
   login: (email: string, password: string) => Promise<void>;
+  loginError: string | null;
   register: () => Promise<void>;
+  registerError: string | null;
   logout: () => void;
   isLoading: boolean;
   error: string | null;
@@ -22,9 +18,10 @@ interface ICurrentUser {
 // Create a new context with default values
 const CurrentUserContext = createContext<ICurrentUser>({
   currentUser: null,
-  getCurrentUser: () => Promise.resolve(),
   login: () => Promise.resolve(),
+  loginError: null,
   register: () => Promise.resolve(),
+  registerError: null,
   logout: () => null,
   isLoading: false,
   error: null,
@@ -36,18 +33,26 @@ const useProvideCurrentUser = () => {
     useState<ICurrentUser["currentUser"]>(null);
   const [isLoading, setLoading] = useState<ICurrentUser["isLoading"]>(false);
   const [error, setError] = useState<ICurrentUser["error"]>(null);
+  const [loginError, setLoginError] =
+    useState<ICurrentUser["loginError"]>(null);
+  const [registerError, setRegisterError] =
+    useState<ICurrentUser["registerError"]>(null);
 
-  // Fetch the permissions & update the state
-  const getCurrentUser = async () => {
-    setLoading(true);
-    setLoading(false);
-  };
+  const login = async (email: string, password: string) => {
+    // Run API call to the /login endpoint
+    await api
+      .post("/login", {
+        email,
+        password,
+      })
+      .catch((err) => console.log("error"));
 
-  const login = async () => {
-    setCurrentUser({
-      displayName: "John Doe",
-      email: "",
-    });
+    console.log("hiya");
+
+    // if (res.status !== 200) {
+    //   setLoginError("Invalid email or password");
+    //   return;
+    // }
   };
 
   const register = async () => {
@@ -58,20 +63,16 @@ const useProvideCurrentUser = () => {
     setCurrentUser(null);
   };
 
-  // Load the permissions once on load
-  useEffect(() => {
-    getCurrentUser();
-  }, []);
-
   // Return all the available hook functions / values
   return {
     currentUser,
-    getCurrentUser,
     login,
     register,
     logout,
     isLoading,
     error,
+    loginError,
+    registerError,
   };
 };
 
