@@ -4,9 +4,6 @@ const UserValidationSchema = require('../helpers/validation/user')
 const UserModel = require('../models/user')
 
 module.exports = {
-    register: async () => {
-        return "post register"
-    },
     validateRequestBody: async (body) => {
         await UserValidationSchema.validateAsync(body)
         // using Joi user schema to validate the request body.
