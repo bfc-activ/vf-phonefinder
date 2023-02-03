@@ -12,8 +12,7 @@ module.exports = {
 
         // talk to mongoDB
         try {
-            const newUser = await registerUser(req.body)
-            res.send(newUser)
+            res.send(await registerUser(req.body))
         } catch (e) {
             return next(e)
         }
