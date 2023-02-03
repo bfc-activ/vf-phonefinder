@@ -38,3 +38,5 @@ yarn-error.log*
 
 # IDEA WebStorm
 .idea
+
+package-lock.json
