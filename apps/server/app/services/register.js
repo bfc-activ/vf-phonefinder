@@ -25,7 +25,7 @@ module.exports = {
 
         await UserModel.create({
             email: body.email,
-            username: body.username,
+            name: body.name,
             password: hashedPassword,
             isAdmin: body.isAdmin
         })
@@ -35,8 +35,3 @@ module.exports = {
 
     }
 }
-
-async function hashPassword(password) {
-    bcrypt.hash(password, 10)
-}
-

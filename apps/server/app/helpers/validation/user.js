@@ -4,10 +4,10 @@ const userSchema = Joi.object({
     email: Joi.string()
         .required(),
 
-    username: Joi.string()
+    name: Joi.string()
         .alphanum()
         .min(3)
-        .max(30)
+        .max(50)
         .required(),
 
     password: Joi.string()
