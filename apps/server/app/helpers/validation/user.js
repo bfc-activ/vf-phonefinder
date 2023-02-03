@@ -1,6 +1,9 @@
 const Joi = require('joi')
 
 const userSchema = Joi.object({
+    email: Joi.string()
+        .required(),
+
     username: Joi.string()
         .alphanum()
         .min(3)
@@ -11,12 +14,8 @@ const userSchema = Joi.object({
         .pattern(new RegExp('^[a-zA-Z0-9]{3,30}$'))
         .required(),
 
-    isAdmin: Joi.boolean(),
-
-    access_token: [
-        Joi.string(),
-        Joi.number()
-    ]
+    isAdmin: Joi.boolean()
+        .required()
 })
 
 module.exports = userSchema
