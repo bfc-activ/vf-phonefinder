@@ -9,6 +9,8 @@ import {
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import useCurrentUser from "@hooks/useCurrentUser";
+import axios from "axios";
 
 // YUP Validation Schema for the LoginForm.
 const schema = yup
@@ -33,14 +35,31 @@ const LoginForm = () => {
     resolver: yupResolver(schema),
     // Validate the form on every input change.
     reValidateMode: "onChange",
+    defaultValues: {
+      email: "test@test.com",
+      password: "123",
+    },
   });
 
+  const { login, loginError } = useCurrentUser();
+
   // onSubmit function, which is called when the form is submitted.
-  const onSubmit = (data: any) => console.log(data);
+  const onSubmit = async (data: { email: string; password: string }) => {
+    console.log("before");
+    await axios
+      .post("http://localhost:3000/login", {
+        email: data.email,
+        password: data.password,
+      })
+      .then(() => console.log("after"))
+      .catch(() => console.log("error"))
+      .finally(() => console.log("finally"));
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <Stack spacing={4}>
+      {loginError && <p>{loginError}</p>}
+      <Stack mt={4} spacing={4}>
         <FormControl variant="floating" isInvalid={errors.email ? true : false}>
           <Input {...register("email")} placeholder=" " />
           <FormLabel>Email address</FormLabel>
