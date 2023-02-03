@@ -1,5 +1,4 @@
 const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken')
 
 const UserValidationSchema = require('../helpers/validation/user')
 const UserModel = require('../models/user')
@@ -23,15 +22,16 @@ module.exports = {
         // 2. Hash the password
         const hashedPassword = await bcrypt.hash(body.password, 10)
 
-        await UserModel.create({
+        const userInstance = await UserModel.create({
             email: body.email,
             name: body.name,
             password: hashedPassword,
             isAdmin: body.isAdmin
         })
 
+        // redact password from confirmation object
+        userInstance.password = '*********'
 
-        // 3. JWT token baby.
-
+        return userInstance
     }
 }

@@ -1,5 +1,4 @@
 const { validateRequestBody, registerUser } = require('../services/register')
-const jwt = require('jsonwebtoken')
 
 module.exports = {
     post: async (req, res, next) => {
@@ -11,12 +10,12 @@ module.exports = {
             return next(e)
         }
 
+        // talk to mongoDB
         try {
-            await registerUser(req.body)
+            const newUser = await registerUser(req.body)
+            res.send(newUser)
         } catch (e) {
             return next(e)
         }
-
-        res.send('OK')
     }
 }
