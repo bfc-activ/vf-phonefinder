@@ -45,10 +45,10 @@ const SignupForm = () => {
     // Validate the form on every input change.
     reValidateMode: "onChange",
     defaultValues: {
-      name: "test",
-      email: "test@test.com",
-      password: "123",
-      confirmPassword: "123",
+      name: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
     },
   });
 
