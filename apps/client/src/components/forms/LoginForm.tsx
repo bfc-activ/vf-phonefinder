@@ -1,4 +1,7 @@
 import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
   Button,
   FormControl,
   FormErrorMessage,
@@ -36,29 +39,34 @@ const LoginForm = () => {
     // Validate the form on every input change.
     reValidateMode: "onChange",
     defaultValues: {
-      email: "test@test.com",
-      password: "123",
+      email: "",
+      password: "",
     },
   });
 
-  const { login, loginError } = useCurrentUser();
+  const { login, loginError, registerMessage } = useCurrentUser();
 
   // onSubmit function, which is called when the form is submitted.
   const onSubmit = async (data: { email: string; password: string }) => {
-    console.log("before");
-    await axios
-      .post("http://localhost:3000/login", {
-        email: data.email,
-        password: data.password,
-      })
-      .then(() => console.log("after"))
-      .catch(() => console.log("error"))
-      .finally(() => console.log("finally"));
+    await login(data.email, data.password);
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      {loginError && <p>{loginError}</p>}
+      {loginError && (
+        <Alert mb={8} status="error">
+          <AlertIcon />
+          <AlertDescription>{loginError}</AlertDescription>
+        </Alert>
+      )}
+
+      {registerMessage && (
+        <Alert mb={8} status="success">
+          <AlertIcon />
+          <AlertDescription>{registerMessage}</AlertDescription>
+        </Alert>
+      )}
+
       <Stack mt={4} spacing={4}>
         <FormControl variant="floating" isInvalid={errors.email ? true : false}>
           <Input {...register("email")} placeholder=" " />

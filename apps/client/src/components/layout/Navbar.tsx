@@ -208,7 +208,7 @@ const Navbar = () => {
           <Flex align="center" experimental_spaceX={4}>
             {currentUser && (
               <Flex experimental_spaceX={6}>
-                <ProfileAvatar name={currentUser.displayName} />
+                <ProfileAvatar name={currentUser.name} />
                 <Button
                   display={{ base: "none", md: "inline-flex" }}
                   mt={{ base: 2, md: 0 }}
@@ -293,7 +293,7 @@ const MobileNav = ({
             )}
             {currentUser && (
               <Flex align="center" justify="space-between">
-                <ProfileAvatar isMobile name={currentUser.displayName} />
+                <ProfileAvatar isMobile name={currentUser.name} />
                 <Button
                   leftIcon={<Icon as={MdLogout} />}
                   variant="outline"

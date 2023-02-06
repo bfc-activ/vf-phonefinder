@@ -1,4 +1,7 @@
 import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
   Button,
   FormControl,
   FormErrorMessage,
@@ -9,12 +12,14 @@ import {
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import useCurrentUser from "@hooks/useCurrentUser";
+import { useState } from "react";
 
 // YUP Validation Schema for the SignupForm.
 const schema = yup
   .object({
     // Display Name has to be at least 2 characters long and max 32 characters long.
-    displayName: yup.string().min(2).max(32).required(),
+    name: yup.string().min(2).max(32).required(),
     // Email has to be a string, required and a valid email.
     email: yup.string().email().required(),
     // Password has to be a string, required and between 3 and 64 characters.
@@ -39,22 +44,49 @@ const SignupForm = () => {
     resolver: yupResolver(schema),
     // Validate the form on every input change.
     reValidateMode: "onChange",
+    defaultValues: {
+      name: "test",
+      email: "test@test.com",
+      password: "123",
+      confirmPassword: "123",
+    },
   });
 
+  const {
+    register: onRegister,
+    registerError,
+    registerMessage,
+  } = useCurrentUser();
+  const [registerLoading, setRegisterLoading] = useState<boolean>(false);
+
   // onSubmit function, which is called when the form is submitted.
-  const onSubmit = (data: any) => console.log(data);
+  const onSubmit = async (data: {
+    name: string;
+    email: string;
+    password: string;
+  }) => {
+    setRegisterLoading(true);
+    await onRegister(data.email, data.password, data.name);
+    setRegisterLoading(false);
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+      {(registerError || registerMessage) && (
+        <Alert mb={8} status={registerError ? "error" : "success"}>
+          <AlertIcon />
+          <AlertDescription>
+            {registerError || registerMessage}
+          </AlertDescription>
+        </Alert>
+      )}
+
       <Stack spacing={4}>
-        <FormControl
-          variant="floating"
-          isInvalid={errors.displayName ? true : false}
-        >
-          <Input {...register("displayName")} placeholder=" " />
+        <FormControl variant="floating" isInvalid={errors.name ? true : false}>
+          <Input {...register("name")} placeholder=" " />
           <FormLabel>Display name</FormLabel>
           <FormErrorMessage>
-            <>{errors.displayName && errors.displayName.message}</>
+            <>{errors.name && errors.name.message}</>
           </FormErrorMessage>
         </FormControl>
 
@@ -92,7 +124,7 @@ const SignupForm = () => {
           </FormErrorMessage>
         </FormControl>
 
-        <Button type="submit" isDisabled={!isDirty}>
+        <Button type="submit" isLoading={registerLoading} isDisabled={!isDirty}>
           Create account
         </Button>
       </Stack>

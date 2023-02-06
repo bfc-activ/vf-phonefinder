@@ -1,15 +1,26 @@
 import api from "../api";
-import { useState, useContext, createContext, ReactNode } from "react";
+import {
+  useState,
+  useContext,
+  createContext,
+  ReactNode,
+  useEffect,
+} from "react";
+import jwt_decode from "jwt-decode";
+import { useNavigate } from "react-router-dom";
+
+type User = {
+  name: string;
+  email: string;
+};
 
 interface ICurrentUser {
-  currentUser: {
-    name: string;
-    email: string;
-  } | null;
+  currentUser: User | null;
   login: (email: string, password: string) => Promise<void>;
   loginError: string | null;
-  register: () => Promise<void>;
+  register: (email: string, password: string, name: string) => Promise<void>;
   registerError: string | null;
+  registerMessage: string | null;
   logout: () => void;
   isLoading: boolean;
   error: string | null;
@@ -22,6 +33,7 @@ const CurrentUserContext = createContext<ICurrentUser>({
   loginError: null,
   register: () => Promise.resolve(),
   registerError: null,
+  registerMessage: null,
   logout: () => null,
   isLoading: false,
   error: null,
@@ -37,31 +49,69 @@ const useProvideCurrentUser = () => {
     useState<ICurrentUser["loginError"]>(null);
   const [registerError, setRegisterError] =
     useState<ICurrentUser["registerError"]>(null);
+  const [registerMessage, setRegisterMessage] =
+    useState<ICurrentUser["registerMessage"]>(null);
+
+  const navigate = useNavigate();
 
   const login = async (email: string, password: string) => {
+    setRegisterMessage(null);
+
     // Run API call to the /login endpoint
-    await api
+    const res = await api
       .post("/login", {
         email,
         password,
       })
-      .catch((err) => console.log("error"));
+      .catch((err) => {
+        setLoginError(err.response.data.error);
+      });
 
-    console.log("hiya");
+    if (!res) return;
 
-    // if (res.status !== 200) {
-    //   setLoginError("Invalid email or password");
-    //   return;
-    // }
+    const { token } = res.data;
+
+    // Decode the token to get the user data
+    localStorage.setItem("jwtToken", token);
+    const decodedUser = jwt_decode(token);
+
+    // Set the current user as the decoded user
+    setCurrentUser(decodedUser as User);
   };
 
-  const register = async () => {
-    return;
+  const register = async (email: string, password: string, name: string) => {
+    // Run API call to the /login endpoint
+    await api
+      .post("/register", {
+        email,
+        password,
+        name,
+      })
+      .then(() => {
+        // If register succeeds, set the register message and redirect to the login page.
+        setRegisterMessage("Registration successful. Please log in.");
+        navigate("/login");
+      })
+      .catch((err) => {
+        // If register fails, set the register error.
+        setRegisterError(err.response.data.error);
+      });
   };
 
   const logout = async () => {
     setCurrentUser(null);
+    localStorage.removeItem("jwtToken");
   };
+
+  // Once the app mounts, check if the jwtToken is in localStorage,
+  // if it is, then set the currentUser as the decoded user.
+  useEffect(() => {
+    const token = localStorage.getItem("jwtToken");
+    if (token) {
+      const decodedUser = jwt_decode(token);
+      setCurrentUser(decodedUser as User);
+    }
+  }, []);
 
   // Return all the available hook functions / values
   return {
@@ -73,6 +123,7 @@ const useProvideCurrentUser = () => {
     error,
     loginError,
     registerError,
+    registerMessage,
   };
 };
 
