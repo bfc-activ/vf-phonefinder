@@ -2,12 +2,10 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema;
 
-// TODO: Add more validation to schemas
 const UserSchema = new Schema({
     name: {
         type: String,
-        required: true,
-        maxLength: 50
+        required: true
     },
     email: {
         required: true,
