@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Login from "@pages/Authentication/Login";
 import Signup from "@pages/Authentication/Signup";
 import Conclusion from "@pages/Conclusion";
+import Admin from "@pages/Admin";
 
 const Router = () => {
   // Create a new React Router with the below routes.
@@ -25,6 +26,10 @@ const Router = () => {
         {
           path: "/register",
           element: <Signup />,
+        },
+        {
+          path: "/admin",
+          element: <Admin />,
         },
         {
           path: "/question/conclude",

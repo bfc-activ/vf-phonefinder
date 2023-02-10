@@ -12,7 +12,7 @@ const AppShell = () => (
       <Fonts />
       <Box position="relative" minH="100vh">
         <Navbar />
-        <Container paddingBottom="7rem">
+        <Container maxW="5xl" paddingBottom="7rem">
           <Outlet />
         </Container>
         <Footer />

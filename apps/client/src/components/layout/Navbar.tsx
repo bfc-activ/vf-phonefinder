@@ -67,7 +67,7 @@ const ProfileAvatar = ({
       <Avatar size="sm" name={name} />
       <Text
         ml={2}
-        color={useColorModeValue("gray.50", "gray.200")}
+        color={useColorModeValue("black", "gray.200")}
         fontSize="md"
         fontWeight="medium"
       >
@@ -256,6 +256,8 @@ const MobileNav = ({
 }) => {
   // Get the current user and logout function from the hook.
   const { currentUser, logout } = useCurrentUser();
+
+  console.log(currentUser);
 
   return (
     <Drawer

@@ -31,6 +31,7 @@ module.exports = {
             id: user.id,
             name: user.name,
             email: user.email,
+            isAdmin: user.isAdmin,
           };
 
           // Sign token
