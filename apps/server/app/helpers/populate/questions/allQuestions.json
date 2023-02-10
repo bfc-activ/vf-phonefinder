@@ -1,0 +1,268 @@
+{
+  "questions": [
+    {
+      "questionNumber": 1,
+      "displayText": "Which brands do you prefer?",
+      "photoURL": "",
+      "type": "multiple_choice",
+      "answers": [
+        {
+          "identifier_id": "",
+          "displayText": "I'm open to ideas"
+        },
+        {
+          "identifier_id": "",
+          "displayText": "Apple",
+          "photoURL": ""
+        },
+        {
+          "identifier_id": "",
+          "displayText": "Samsung",
+          "photoURL": ""
+        },
+        {
+          "identifier_id": "",
+          "displayText": "Google",
+          "photoURL": ""
+        },
+        {
+          "identifier_id": "",
+          "displayText": "Motorola",
+          "photoURL": ""
+        },
+        {
+          "identifier_id": "",
+          "displayText": "Nokia",
+          "photoURL": ""
+        },
+        {
+          "identifier_id": "",
+          "displayText": "Xiaomi",
+          "photoURL": ""
+        },
+        {
+          "identifier_id": "",
+          "displayText": "Oppo",
+          "photoURL": ""
+        },
+        {
+          "identifier_id": "",
+          "displayText": "Honor",
+          "photoURL": ""
+        }
+      ]
+    },
+    {
+      "questionNumber": 2,
+      "displayText": "What best describes the phone you are looking for?",
+      "photoURL": "",
+      "type": "slider",
+      "answers": [
+        {
+          "displayText": "Basic and low cost",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Mid-level",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Very latest tech",
+          "identifier_id": ""
+        }
+      ]
+    },
+    {
+      "questionNumber": 3,
+      "displayText": "What will you regularly use your phone for?",
+      "photoURL": "",
+      "type": "multiple_choice",
+      "answers": [
+        {
+          "displayText": "Using messaging apps",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Browsing, emails and shopping",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Streaming music or podcasts",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Watching videos, TV or movies",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Streaming sports",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Social media browsing and sharing",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Maps and GPS",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Travel abroad",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "As a data hotspot for other devices",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Gaming on the go",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "None of these, just calls and texts",
+          "identifier_id": ""
+        }
+      ]
+    },
+    {
+      "questionNumber": 4,
+      "displayText": "How important is camera quality?",
+      "photoURL": "",
+      "type": "slider",
+      "answers": [
+        {
+          "displayText": "Don't mind",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Important",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Essential",
+          "identifier_id": ""
+        }
+      ]
+    },
+    {
+      "questionNumber": 5,
+      "displayText": "How important is battery life?",
+      "photoURL": "",
+      "type": "slider",
+      "answers": [
+        {
+          "displayText": "Don't mind",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Important",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Essential",
+          "identifier_id": ""
+        }
+      ]
+    },
+    {
+      "questionNumber": 6,
+      "displayText": "How important is water resistance?",
+      "photoURL": "",
+      "type": "slider",
+      "answers": [
+        {
+          "displayText": "Don't mind",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Important",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Essential",
+          "identifier_id": ""
+        }
+      ]
+    },
+    {
+      "questionNumber": 7,
+      "displayText": "How important is 5G compatibility?",
+      "photoURL": "",
+      "type": "slider",
+      "answers": [
+        {
+          "displayText": "Don't mind",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Important",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "Essential",
+          "identifier_id": ""
+        }
+      ]
+    },
+    {
+      "questionNumber": 8,
+      "displayText": "Would you prefer a plus-size screen?",
+      "photoURL": "",
+      "type": "single_choice",
+      "answers": [
+        {
+          "displayText": "Yes, the bigger the better",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "No, I’d like a standard size",
+          "identifier_id": ""
+        },
+        {
+          "displayText": "I don’t mind",
+          "identifier_id": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "questionNumber": 8,
+  "displayText": "Would you prefer a plus-size screen?",
+  "photoURL": "",
+  "type": "single_choice",
+  "answers": [
+    {
+      "displayText": "Yes, the bigger the better",
+      "identifier_id": ""
+    },
+    {
+      "displayText": "No, I’d like a standard size",
+      "identifier_id": ""
+    },
+    {
+      "displayText": "I don’t mind",
+      "identifier_id": ""
+    }
+  ]
+}
