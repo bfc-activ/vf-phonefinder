@@ -1,0 +1,204 @@
+{
+  "answers": [
+    {
+      "_id": "brand_any",
+      "displayText": "I'm open to ideas"
+    },
+    {
+      "_id": "brand_apple",
+      "displayText": "Apple",
+      "photoURL": ""
+    },
+    {
+      "_id": "brand_samsung",
+      "displayText": "Samsung",
+      "photoURL": ""
+    },
+    {
+      "_id": "brand_google",
+      "displayText": "Google",
+      "photoURL": ""
+    },
+    {
+      "_id": "brand_motorola",
+      "displayText": "Motorola",
+      "photoURL": ""
+    },
+    {
+      "_id": "brand_nokia",
+      "displayText": "Nokia",
+      "photoURL": ""
+    },
+    {
+      "_id": "brand_xiaomi",
+      "displayText": "Xiaomi",
+      "photoURL": ""
+    },
+    {
+      "_id": "brand_oppo",
+      "displayText": "Oppo",
+      "photoURL": ""
+    },
+    {
+      "_id": "brand_honor",
+      "displayText": "Honor",
+      "photoURL": ""
+    },
+    {
+      "_id": "price_low",
+      "displayText": "Basic and low cost"
+    },
+    {
+      "_id": "price_low_to_mid",
+      "displayText": ""
+    },
+    {
+      "_id": "price_mid",
+      "displayText": "Mid-level"
+    },
+    {
+      "_id": "price_mid_to_high",
+      "displayText": ""
+    },
+    {
+      "_id": "price_high",
+      "displayText": "Very latest tech"
+    },
+    {
+      "_id": "usage_messaging",
+      "displayText": "Using messaging apps"
+    },
+    {
+      "_id": "usage_browsing",
+      "displayText": "Browsing, emails and shopping"
+    },
+    {
+      "_id": "usage_audio",
+      "displayText": "Streaming music or podcasts"
+    },
+    {
+      "_id": "usage_video",
+      "displayText": "Watching videos, TV or movies"
+    },
+    {
+      "_id": "usage_live",
+      "displayText": "Streaming sports"
+    },
+    {
+      "_id": "usage_social",
+      "displayText": "Social media browsing and sharing"
+    },
+    {
+      "_id": "usage_maps",
+      "displayText": "Maps and GPS"
+    },
+    {
+      "_id": "usage_travel",
+      "displayText": "Travel abroad"
+    },
+    {
+      "_id": "usage_hotspot",
+      "displayText": "As a data hotspot for other devices"
+    },
+    {
+      "_id": "usage_gaming",
+      "displayText": "Gaming on the go"
+    },
+    {
+      "_id": "usage_none",
+      "displayText": "None of these, just calls and texts"
+    },
+    {
+      "_id": "camera_low",
+      "displayText": "Don't mind"
+    },
+    {
+      "_id": "camera_low_to_mid",
+      "displayText": ""
+    },
+    {
+      "_id": "camera_mid",
+      "displayText": "Important"
+    },
+    {
+      "_id": "camera_mid_to_high",
+      "displayText": ""
+    },
+    {
+      "_id": "camera_high",
+      "displayText": "Essential"
+    },
+    {
+      "_id": "battery_low",
+      "displayText": "Don't mind"
+    },
+    {
+      "_id": "battery_low_to_mid",
+      "displayText": ""
+    },
+    {
+      "_id": "battery_mid",
+      "displayText": "Important"
+    },
+    {
+      "_id": "battery_mid_to_high",
+      "displayText": ""
+    },
+    {
+      "_id": "battery_high",
+      "displayText": "Essential"
+    },
+    {
+      "_id": "water_low",
+      "displayText": "Don't mind"
+    },
+    {
+      "_id": "water_low_to_mid",
+      "displayText": ""
+    },
+    {
+      "_id": "water_mid",
+      "displayText": "Important"
+    },
+    {
+      "_id": "water_mid_to_high",
+      "displayText": ""
+    },
+    {
+      "_id": "water_high",
+      "displayText": "Essential"
+    },
+    {
+      "_id": "5G_low",
+      "displayText": "Don't mind"
+    },
+    {
+      "_id": "5G_low_to_mid",
+      "displayText": ""
+    },
+    {
+      "_id": "5G_mid",
+      "displayText": "Important"
+    },
+    {
+      "_id": "5G_mid_to_high",
+      "displayText": ""
+    },
+    {
+      "_id": "5G_high",
+      "displayText": "Essential"
+    },
+    {
+      "_id": "size_big",
+      "displayText": "Yes, the bigger the better"
+    },
+    {
+      "_id": "size_standard",
+      "displayText": "No, I’d like a standard size"
+    },
+    {
+      "_id": "size_small_or_any",
+      "displayText": "I don’t mind"
+    }
+  ]
+}
