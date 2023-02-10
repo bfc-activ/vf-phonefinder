@@ -1,5 +1,8 @@
+const QuestionModel = require('../models/question')
+
 module.exports = {
     get: async () => {
-        return "get questions"
+        // return all questions
+        return QuestionModel.find()
     }
 }

@@ -2,6 +2,8 @@
 const app = require('./app')
 const mongoDB = require('./app/config/mongoose')
 
+const populateQuestions = require('./app/helpers/populate/populateQuestions')
+
 const port = process.env.PORT || '3000'
 
 main().catch(error => {
@@ -11,5 +13,8 @@ main().catch(error => {
 
 async function main() {
     await mongoDB.connect()
+
+    // await populateQuestions()
+
     app.listen(port, () => console.log(`PhoneFinder API is listening on port ${port}`))
 }
