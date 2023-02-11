@@ -20,10 +20,8 @@ const QuestionSchema = new Schema({
         required: true
     },
     answer_ids: [{
-        _id: {
-            type: String,
-            required: true
-        }
+        type: String,
+        required: true
     }]
 })
 
