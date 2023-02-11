@@ -7,7 +7,7 @@ const ResultSchema = new Schema({
             required: true,
             ref: 'User'
         },
-        answer_names: [{
+        answer_ids: [{
             type: String,
             required: true
         }]

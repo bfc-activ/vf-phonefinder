@@ -38,7 +38,7 @@ const PhoneSchema = new Schema({
         type: Number,
         required: true
     },
-    answer_names: [{
+    answer_ids: [{
         type: String
     }]
 })

@@ -10,7 +10,7 @@
       "hasWirelessCharging": true,
       "storageCapacityGB": 128,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Apple_iPhone_14_blue-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -24,7 +24,7 @@
       "hasWirelessCharging": true,
       "storageCapacityGB": 256,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Apple_iPhone_13_Pro_Max_alpine_green-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -38,7 +38,7 @@
       "hasWirelessCharging": true,
       "storageCapacityGB": 64,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Apple_iPhone_SE_product_red-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -52,7 +52,7 @@
       "hasWirelessCharging": true,
       "storageCapacityGB": 512,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_S23_Ultra_green-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -66,7 +66,7 @@
       "hasWirelessCharging": true,
       "storageCapacityGB": 128,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_Z_Flip4_bora_purple-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -80,7 +80,7 @@
       "hasWirelessCharging": false,
       "storageCapacityGB": 64,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_A13_black-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -94,7 +94,7 @@
       "hasWirelessCharging": false,
       "storageCapacityGB": 128,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Google_Pixel_6A_charcoal-full-product-front-600-v2.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -108,7 +108,7 @@
       "hasWirelessCharging": false,
       "storageCapacityGB": 128,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Sony_Xperia_10_IV_black-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -122,7 +122,7 @@
       "hasWirelessCharging": false,
       "storageCapacityGB": 256,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Xiaomi_12_Pro_gray-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -136,7 +136,7 @@
       "hasWirelessCharging": false,
       "storageCapacityGB": 128,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Oppo_A54s_crystal_black-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -150,7 +150,7 @@
       "hasWirelessCharging": true,
       "storageCapacityGB": 128,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Apple_iPhone_14_blue-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -164,7 +164,7 @@
       "hasWirelessCharging": true,
       "storageCapacityGB": 256,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Apple_iPhone_13_Pro_Max_alpine_green-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -178,7 +178,7 @@
       "hasWirelessCharging": true,
       "storageCapacityGB": 64,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Apple_iPhone_SE_product_red-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -192,7 +192,7 @@
       "hasWirelessCharging": true,
       "storageCapacityGB": 512,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_S23_Ultra_green-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -206,7 +206,7 @@
       "hasWirelessCharging": true,
       "storageCapacityGB": 128,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_Z_Flip4_bora_purple-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -220,7 +220,7 @@
       "hasWirelessCharging": false,
       "storageCapacityGB": 64,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_A13_black-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -234,7 +234,7 @@
       "hasWirelessCharging": false,
       "storageCapacityGB": 128,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Google_Pixel_6A_charcoal-full-product-front-600-v2.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -248,7 +248,7 @@
       "hasWirelessCharging": false,
       "storageCapacityGB": 128,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Sony_Xperia_10_IV_black-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -262,7 +262,7 @@
       "hasWirelessCharging": false,
       "storageCapacityGB": 256,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Xiaomi_12_Pro_gray-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -276,7 +276,7 @@
       "hasWirelessCharging": false,
       "storageCapacityGB": 128,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Oppo_A54s_crystal_black-full-product-front-600.png",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     },
@@ -290,7 +290,7 @@
       "hasWirelessCharging": null,
       "storageCapacityGB": 0,
       "photoURL": "",
-      "answer_names": [
+      "answer_ids": [
         ""
       ]
     }

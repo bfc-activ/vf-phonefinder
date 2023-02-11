@@ -5,7 +5,7 @@
       "displayText": "Which brands do you prefer?",
       "photoURL": "",
       "type": "multiple_choice",
-      "answer_names": [
+      "answer_ids": [
         "brand_any",
         "brand_apple",
         "brand_samsung",
@@ -22,7 +22,7 @@
       "displayText": "What best describes the phone you are looking for?",
       "photoURL": "",
       "type": "slider",
-      "answer_names": [
+      "answer_ids": [
         "price_low",
         "price_low_to_mid",
         "price_mid",
@@ -35,7 +35,7 @@
       "displayText": "What will you regularly use your phone for?",
       "photoURL": "",
       "type": "multiple_choice",
-      "answer_names": [
+      "answer_ids": [
         "usage_messaging",
         "usage_browsing",
         "usage_audio",
@@ -54,7 +54,7 @@
       "displayText": "How important is camera quality?",
       "photoURL": "",
       "type": "slider",
-      "answer_names": [
+      "answer_ids": [
         "camera_low",
         "camera_low_to_mid",
         "camera_mid",
@@ -67,7 +67,7 @@
       "displayText": "How important is battery life?",
       "photoURL": "",
       "type": "slider",
-      "answer_names": [
+      "answer_ids": [
         "battery_low",
         "battery_low_to_mid",
         "battery_mid",
@@ -80,7 +80,7 @@
       "displayText": "How important is water resistance?",
       "photoURL": "",
       "type": "slider",
-      "answer_names": [
+      "answer_ids": [
         "water_low",
         "water_low_to_mid",
         "water_mid",
@@ -93,7 +93,7 @@
       "displayText": "How important is 5G compatibility?",
       "photoURL": "",
       "type": "slider",
-      "answer_names": [
+      "answer_ids": [
         "5G_low",
         "5G_low_to_mid",
         "5G_mid",
@@ -106,7 +106,7 @@
       "displayText": "Would you prefer a plus-size screen?",
       "photoURL": "",
       "type": "single_choice",
-      "answer_names": [
+      "answer_ids": [
         "size_big",
         "size_standard",
         "size_small_or_any"
