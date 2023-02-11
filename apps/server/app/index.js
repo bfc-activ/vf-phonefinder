@@ -3,7 +3,7 @@ const cors = require("cors");
 const logger = require("morgan");
 const passport = require("passport");
 const bodyParser = require("body-parser");
-const errorHandler = require("./helpers/errorHandler");
+const errorHandler = require("./middleware/errorHandler");
 
 require("dotenv").config();
 
