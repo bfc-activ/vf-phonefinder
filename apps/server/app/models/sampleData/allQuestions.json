@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-      "questionNumber": 1,
+      "position": 1,
       "displayText": "Which brands do you prefer?",
       "photoURL": "",
       "type": "multiple_choice",
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "questionNumber": 2,
+      "position": 2,
       "displayText": "What best describes the phone you are looking for?",
       "photoURL": "",
       "type": "slider",
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "questionNumber": 3,
+      "position": 3,
       "displayText": "What will you regularly use your phone for?",
       "photoURL": "",
       "type": "multiple_choice",
@@ -50,7 +50,7 @@
       ]
     },
     {
-      "questionNumber": 4,
+      "position": 4,
       "displayText": "How important is camera quality?",
       "photoURL": "",
       "type": "slider",
@@ -63,7 +63,7 @@
       ]
     },
     {
-      "questionNumber": 5,
+      "position": 5,
       "displayText": "How important is battery life?",
       "photoURL": "",
       "type": "slider",
@@ -76,7 +76,7 @@
       ]
     },
     {
-      "questionNumber": 6,
+      "position": 6,
       "displayText": "How important is water resistance?",
       "photoURL": "",
       "type": "slider",
@@ -89,7 +89,7 @@
       ]
     },
     {
-      "questionNumber": 7,
+      "position": 7,
       "displayText": "How important is 5G compatibility?",
       "photoURL": "",
       "type": "slider",
@@ -102,7 +102,7 @@
       ]
     },
     {
-      "questionNumber": 8,
+      "position": 8,
       "displayText": "Would you prefer a plus-size screen?",
       "photoURL": "",
       "type": "single_choice",
