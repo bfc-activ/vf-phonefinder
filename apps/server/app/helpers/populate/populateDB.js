@@ -15,23 +15,22 @@ const connect = async () => {
     }
 }
 
-const Answer = require('../../models/answer')
-const answerData = require('../../models/sampleData/allAnswers.json')
-
-const Question = require('../../models/question')
-const questionData = require('../../models/sampleData/allQuestions.json')
-
-const User = require('../../models/user')
-
-const populateDB = async () => {
-    // await Answer.create(answerData.answers)
-    await Question.create(questionData.questions)
-}
-
 connect().then(() => {
     populateDB().then(() => {
         console.log('done')
     })
 })
+
+const populateDB = async () => {
+    // const Answer = require('../../models/answer')
+    // const answerData = require('../../models/sampleData/allAnswers.json')
+    // await Answer.create(answerData.answers)
+
+    const Question = require('../../models/question')
+    const questionData = require('../../models/sampleData/allQuestions.json')
+    await Question.create(questionData.questions)
+
+    // const User = require('../../models/user')
+}
 
 module.exports = { populateDB }
