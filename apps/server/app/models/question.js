@@ -2,6 +2,11 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const QuestionSchema = new Schema({
+    questionNumber: {
+        type: Number,
+        required: true,
+        unique: true
+    },
     displayText: {
         type: String,
         required: true
@@ -18,7 +23,8 @@ const QuestionSchema = new Schema({
         _id: {
             type: String,
             required: true,
-            ref: 'Answer'
+            ref: 'Answer',
+            unique: true
         }
     }]
 })
