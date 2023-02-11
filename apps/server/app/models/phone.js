@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+
 const PhoneSchema = new Schema({
     name: {
         type: String,
@@ -37,9 +38,10 @@ const PhoneSchema = new Schema({
         type: Number,
         required: true
     },
-    identifier_ids: {
+    answer_id: {
         type: String,
-        ref: 'Identifier'
+        ref: 'Answer'
     }
 })
+
 module.exports = Phone = mongoose.model('Phone', PhoneSchema)
