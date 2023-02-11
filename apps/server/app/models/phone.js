@@ -38,10 +38,11 @@ const PhoneSchema = new Schema({
         type: Number,
         required: true
     },
-    answer_id: {
+    answer_ids: [{
         type: String,
-        ref: 'Answer'
-    }
+        ref: 'Answer',
+        unique: true
+    }]
 })
 
 module.exports = Phone = mongoose.model('Phone', PhoneSchema)
