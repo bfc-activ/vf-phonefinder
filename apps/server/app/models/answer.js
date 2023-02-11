@@ -13,6 +13,10 @@ const AnswerSchema = new Schema(
         },
         photoURL: {
             type: String
+        },
+        position: {
+            type: Number,
+            required: true
         }
     }
 );

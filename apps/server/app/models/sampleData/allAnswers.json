@@ -2,203 +2,251 @@
   "answers": [
     {
       "id": "brand_any",
-      "displayText": "I'm open to ideas"
+      "displayText": "I'm open to ideas",
+      "position": 1
     },
     {
       "id": "brand_apple",
       "displayText": "Apple",
-      "photoURL": ""
+      "photoURL": "",
+      "position": 2
     },
     {
       "id": "brand_samsung",
       "displayText": "Samsung",
-      "photoURL": ""
+      "photoURL": "",
+      "position": 3
     },
     {
       "id": "brand_google",
       "displayText": "Google",
-      "photoURL": ""
+      "photoURL": "",
+      "position": 4
     },
     {
       "id": "brand_motorola",
       "displayText": "Motorola",
-      "photoURL": ""
+      "photoURL": "",
+      "position": 5
     },
     {
       "id": "brand_nokia",
       "displayText": "Nokia",
-      "photoURL": ""
+      "photoURL": "",
+      "position": 6
     },
     {
       "id": "brand_xiaomi",
       "displayText": "Xiaomi",
-      "photoURL": ""
+      "photoURL": "",
+      "position": 7
     },
     {
       "id": "brand_oppo",
       "displayText": "Oppo",
-      "photoURL": ""
+      "photoURL": "",
+      "position": 8
     },
     {
       "id": "brand_honor",
       "displayText": "Honor",
-      "photoURL": ""
+      "photoURL": "",
+      "position": 9
     },
     {
       "id": "price_low",
-      "displayText": "Basic and low cost"
+      "displayText": "Basic and low cost",
+      "position": 1
     },
     {
       "id": "price_low_to_mid",
-      "displayText": ""
+      "displayText": "",
+      "position": 2
     },
     {
       "id": "price_mid",
-      "displayText": "Mid-level"
+      "displayText": "Mid-level",
+      "position": 3
     },
     {
       "id": "price_mid_to_high",
-      "displayText": ""
+      "displayText": "",
+      "position": 4
     },
     {
       "id": "price_high",
-      "displayText": "Very latest tech"
+      "displayText": "Very latest tech",
+      "position": 5
     },
     {
       "id": "usage_messaging",
-      "displayText": "Using messaging apps"
+      "displayText": "Using messaging apps",
+      "position": 1
     },
     {
       "id": "usage_browsing",
-      "displayText": "Browsing, emails and shopping"
+      "displayText": "Browsing, emails and shopping",
+      "position": 2
     },
     {
       "id": "usage_audio",
-      "displayText": "Streaming music or podcasts"
+      "displayText": "Streaming music or podcasts",
+      "position": 3
     },
     {
       "id": "usage_video",
-      "displayText": "Watching videos, TV or movies"
+      "displayText": "Watching videos, TV or movies",
+      "position": 4
     },
     {
       "id": "usage_live",
-      "displayText": "Streaming sports"
+      "displayText": "Streaming sports",
+      "position": 5
     },
     {
       "id": "usage_social",
-      "displayText": "Social media browsing and sharing"
+      "displayText": "Social media browsing and sharing",
+      "position": 6
     },
     {
       "id": "usage_maps",
-      "displayText": "Maps and GPS"
+      "displayText": "Maps and GPS",
+      "position": 7
     },
     {
       "id": "usage_travel",
-      "displayText": "Travel abroad"
+      "displayText": "Travel abroad",
+      "position": 8
     },
     {
       "id": "usage_hotspot",
-      "displayText": "As a data hotspot for other devices"
+      "displayText": "As a data hotspot for other devices",
+      "position": 9
     },
     {
       "id": "usage_gaming",
-      "displayText": "Gaming on the go"
+      "displayText": "Gaming on the go",
+      "position": 10
     },
     {
       "id": "usage_none",
-      "displayText": "None of these, just calls and texts"
+      "displayText": "None of these, just calls and texts",
+      "position": 11
     },
     {
       "id": "camera_low",
-      "displayText": "Don't mind"
+      "displayText": "Don't mind",
+      "position": 1
     },
     {
       "id": "camera_low_to_mid",
-      "displayText": ""
+      "displayText": "",
+      "position": 2
     },
     {
       "id": "camera_mid",
-      "displayText": "Important"
+      "displayText": "Important",
+      "position": 3
     },
     {
       "id": "camera_mid_to_high",
-      "displayText": ""
+      "displayText": "",
+      "position": 4
     },
     {
       "id": "camera_high",
-      "displayText": "Essential"
+      "displayText": "Essential",
+      "position": 5
     },
     {
       "id": "battery_low",
-      "displayText": "Don't mind"
+      "displayText": "Don't mind",
+      "position": 1
     },
     {
       "id": "battery_low_to_mid",
-      "displayText": ""
+      "displayText": "",
+      "position": 2
     },
     {
       "id": "battery_mid",
-      "displayText": "Important"
+      "displayText": "Important",
+      "position": 3
     },
     {
       "id": "battery_mid_to_high",
-      "displayText": ""
+      "displayText": "",
+      "position": 4
     },
     {
       "id": "battery_high",
-      "displayText": "Essential"
+      "displayText": "Essential",
+      "position": 5
     },
     {
       "id": "water_low",
-      "displayText": "Don't mind"
+      "displayText": "Don't mind",
+      "position": 1
     },
     {
       "id": "water_low_to_mid",
-      "displayText": ""
+      "displayText": "",
+      "position": 2
     },
     {
       "id": "water_mid",
-      "displayText": "Important"
+      "displayText": "Important",
+      "position": 3
     },
     {
       "id": "water_mid_to_high",
-      "displayText": ""
+      "displayText": "",
+      "position": 4
     },
     {
       "id": "water_high",
-      "displayText": "Essential"
+      "displayText": "Essential",
+      "position": 5
     },
     {
       "id": "5G_low",
-      "displayText": "Don't mind"
+      "displayText": "Don't mind",
+      "position": 1
     },
     {
       "id": "5G_low_to_mid",
-      "displayText": ""
+      "displayText": "",
+      "position": 2
     },
     {
       "id": "5G_mid",
-      "displayText": "Important"
+      "displayText": "Important",
+      "position": 3
     },
     {
       "id": "5G_mid_to_high",
-      "displayText": ""
+      "displayText": "",
+      "position": 4
     },
     {
       "id": "5G_high",
-      "displayText": "Essential"
+      "displayText": "Essential",
+      "position": 5
     },
     {
       "id": "size_big",
-      "displayText": "Yes, the bigger the better"
+      "displayText": "Yes, the bigger the better",
+      "position": 1
     },
     {
       "id": "size_standard",
-      "displayText": "No, I’d like a standard size"
+      "displayText": "No, I’d like a standard size",
+      "position": 2
     },
     {
       "id": "size_small_or_any",
-      "displayText": "I don’t mind"
+      "displayText": "I don’t mind",
+      "position": 3
     }
   ]
 }
