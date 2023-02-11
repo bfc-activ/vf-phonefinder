@@ -22,9 +22,9 @@ connect().then(() => {
 })
 
 const populateDB = async () => {
-    // const Answer = require('../../models/answer')
-    // const answerData = require('../../models/sampleData/allAnswers.json')
-    // await Answer.create(answerData.answers)
+    const Answer = require('../../models/answer')
+    const answerData = require('../../models/sampleData/allAnswers.json')
+    await Answer.create(answerData.answers)
 
     const Question = require('../../models/question')
     const questionData = require('../../models/sampleData/allQuestions.json')
