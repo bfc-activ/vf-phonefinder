@@ -22,9 +22,7 @@ const QuestionSchema = new Schema({
     answer_ids: [{
         _id: {
             type: String,
-            required: true,
-            ref: 'Answer',
-            unique: true
+            required: true
         }
     }]
 })

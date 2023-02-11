@@ -39,9 +39,7 @@ const PhoneSchema = new Schema({
         required: true
     },
     answer_ids: [{
-        type: String,
-        ref: 'Answer',
-        unique: true
+        type: String
     }]
 })
 

@@ -9,8 +9,7 @@ const ResultSchema = new Schema({
         },
         answer_ids: [{
             type: String,
-            required: true,
-            ref: 'Answer'
+            required: true
         }]
     },
     {
