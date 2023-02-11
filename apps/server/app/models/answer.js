@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const AnswerSchema = new Schema(
     {
-        _id: {
+        name: {
             type: String,
             required: true,
             unique: true

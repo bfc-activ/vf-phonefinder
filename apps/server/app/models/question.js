@@ -19,7 +19,7 @@ const QuestionSchema = new Schema({
         enum: ['single_choice', 'multiple_choice', 'slider'],
         required: true
     },
-    answer_ids: [{
+    answer_names: [{
         type: String,
         required: true
     }]
