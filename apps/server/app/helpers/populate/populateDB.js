@@ -15,28 +15,17 @@ const connect = async () => {
     }
 }
 
-const Question = require('../../models/question')
-const User = require('../../models/user')
 const Answer = require('../../models/answer')
 const answerData = require('../../models/sampleData/allAnswers.json')
 
-const populateAnswers = async () => {
-    await Answer.create(answerData.answers)
-    // for (const answer of answerData.answers) {
-    //     console.log(answer)
-    //     await Answer.create(answer)
-    // }
-}
+const Question = require('../../models/question')
+const questionData = require('../../models/sampleData/allQuestions.json')
 
-const populateQuestions = async () => {
-
-}
+const User = require('../../models/user')
 
 const populateDB = async () => {
-    await populateAnswers()
-    await populateQuestions()
-    // await populatePhones()
-    // await populateUsers()
+    // await Answer.create(answerData.answers)
+    await Question.create(questionData.questions)
 }
 
 connect().then(() => {
@@ -44,7 +33,5 @@ connect().then(() => {
         console.log('done')
     })
 })
-
-
 
 module.exports = { populateDB }
