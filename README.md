@@ -1,3 +1,5 @@
+![Vodafone Logo](https://assets.vodafone.co.uk/cs/groups/public/documents/webcontent/img_vodafone__icon.png)
+
 # Vodafone PhoneFinder
 
 This app was developed for the Rich Internet Applications Module for the
