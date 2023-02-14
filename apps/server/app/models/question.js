@@ -2,10 +2,8 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const QuestionSchema = new Schema({
-    position: {
-        type: Number,
-        required: true,
-        unique: true
+    _id: {
+        type: Number
     },
     displayText: {
         type: String,
@@ -19,10 +17,11 @@ const QuestionSchema = new Schema({
         enum: ['single_choice', 'multiple_choice', 'slider'],
         required: true
     },
-    answer_ids: [{
+    answers: [{
         type: String,
-        required: true
-    }]
+        required: true,
+        ref: 'Answer'
+    }],
 })
 
 module.exports = Question = mongoose.model('Question', QuestionSchema)
