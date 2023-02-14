@@ -1,8 +1,10 @@
 const mongoose = require('mongoose')
-
 // Future proofing setting
 mongoose.set('strictQuery', false)
 mongoose.set('strict', 'throw')  // throw errors when schema validation fails
+
+const Answer = require('../../models/answer')
+const Question = require('../../models/question')
 
 const connect = async () => {
     try {
@@ -22,13 +24,15 @@ connect().then(() => {
 })
 
 const populateDB = async () => {
-    const Answer = require('../../models/answer')
+    console.log('populating answers')
     const answerData = require('../../models/sampleData/allAnswers.json')
-    await Answer.create(answerData.answers)
+    await Answer.insertMany(answerData.answers)
+    console.log('ok')
 
-    const Question = require('../../models/question')
+    console.log('populating questions')
     const questionData = require('../../models/sampleData/allQuestions.json')
-    await Question.create(questionData.questions)
+    await Question.insertMany(questionData.questions)
+    console.log('ok')
 
     // const User = require('../../models/user')
 }
