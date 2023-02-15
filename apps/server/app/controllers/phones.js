@@ -1,7 +1,7 @@
 const phonesService = require('../services/phones')
 
 module.exports = {
-    get: async (req, res, next) => {
+    getAll: async (req, res, next) => {
         try {
             res.send(await phonesService.findAll())
         } catch (err) {
