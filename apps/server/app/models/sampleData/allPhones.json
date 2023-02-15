@@ -11,7 +11,44 @@
       "storageCapacityGB": 128,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Apple_iPhone_14_blue-full-product-front-600.png",
       "answers": [
-        ""
+        "brand_any",
+        "brand_apple",
+        "price_low",
+        "price_low_to_mid",
+        "price_mid",
+        "price_mid_to_high",
+        "price_high",
+        "usage_messaging",
+        "usage_browsing",
+        "usage_audio",
+        "usage_video",
+        "usage_live",
+        "usage_social",
+        "usage_maps",
+        "usage_travel",
+        "usage_hotspot",
+        "usage_gaming",
+        "camera_low",
+        "camera_low_to_mid",
+        "camera_mid",
+        "camera_mid_to_high",
+        "camera_high",
+        "battery_low",
+        "battery_low_to_mid",
+        "battery_mid",
+        "battery_mid_to_high",
+        "battery_high",
+        "water_low",
+        "water_low_to_mid",
+        "water_mid",
+        "water_mid_to_high",
+        "water_high",
+        "5G_low",
+        "5G_low_to_mid",
+        "5G_mid",
+        "5G_mid_to_high",
+        "5G_high",
+        "size_standard"
       ]
     },
     {
@@ -291,7 +328,17 @@
       "storageCapacityGB": 0,
       "photoURL": "",
       "answers": [
-        ""
+        "brand_any",
+        "price_low",
+        "usage_messaging",
+        "usage_browsing",
+        "usage_social",
+        "usage_maps",
+        "usage_hotspot",
+        "camera_low",
+        "battery_low",
+        "water_low",
+        "5G_low"
       ]
     }
   ]
