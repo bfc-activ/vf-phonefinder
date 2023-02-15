@@ -13,8 +13,7 @@
         "brand_motorola",
         "brand_nokia",
         "brand_xiaomi",
-        "brand_oppo",
-        "brand_honor"
+        "brand_oppo"
       ]
     },
     {
@@ -46,7 +45,6 @@
         "usage_travel",
         "usage_hotspot",
         "usage_gaming",
-        "usage_none"
       ]
     },
     {
@@ -109,7 +107,7 @@
       "answers": [
         "size_big",
         "size_standard",
-        "size_small_or_any"
+        "size_small"
       ]
     }
   ]
