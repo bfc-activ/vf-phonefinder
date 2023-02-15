@@ -3,6 +3,6 @@ require('../models/answer')
 
 module.exports = {
     findAll: async () => {
-        return Phones.find()
+        return Phones.find().populate('answers')
     }
 }
