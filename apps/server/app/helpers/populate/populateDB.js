@@ -7,6 +7,7 @@ mongoose.set('strict', 'throw')  // throw errors when schema validation fails
 
 const Answer = require('../../models/answer')
 const Question = require('../../models/question')
+const User = require('../../models/user')
 
 const connect = async () => {
     try {
@@ -35,7 +36,6 @@ const populateQuestions = async () => {
 
 const populateUsers = async () => {
     console.log('populating users')
-    const User = require('../../models/user')
 
     const adminPassword = process.argv[2]
     const adminHashedPassword = await bcrypt.hash(adminPassword, 10)
@@ -61,8 +61,8 @@ const populateUsers = async () => {
 }
 
 const populateDB = async () => {
-    // await populateAnswers()
-    // await populateQuestions()
+    await populateAnswers()
+    await populateQuestions()
     await populateUsers()
 }
 
