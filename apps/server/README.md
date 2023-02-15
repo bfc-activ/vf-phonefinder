@@ -40,5 +40,6 @@ node app/helpers/populate/populateDB.js admin_password user_password
 
 To customize the data populated in the database the following changes can be made:
 
-1. Comment or uncomment specific tables run in the population within the `app/helpers/populateDB.js` file. Specifically, in the `populateDB` function.
-2. The `Phone`, `Question`, and `Answer` data are all found in `app/models/sampleData/`, in `allPhones.json`, `allQuestions.json`, and `allAnswers.json` respectively.
+* Comment or uncomment specific tables run in the population within the `app/helpers/populateDB.js` file. Specifically, in the `populateDB` function.
+* The `Phone`, `Question`, and `Answer` data are all found in `app/models/sampleData/`, in `allPhones.json`, `allQuestions.json`, and `allAnswers.json` respectively.
+* Feel free to add more users and save them to the database in the population script found in `app/helpers/populateDB.js`.
