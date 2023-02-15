@@ -11,7 +11,7 @@ module.exports = {
             next(err)
         }
     },
-    get: async (req, res, next) => {
+    getAll: async (req, res, next) => {
         try {
             res.send(await resultsService.findAll())
         } catch (err) {
@@ -42,5 +42,5 @@ module.exports = {
             console.error(`Error while fetching latest result with ${req.params}`, err.message)
             next(err)
         }
-    },
+    }
 }
