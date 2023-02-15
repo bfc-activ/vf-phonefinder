@@ -21,6 +21,7 @@ app.use(
   })
 );
 app.use(errorHandler);
+
 app.use(
   bodyParser.urlencoded({
     extended: false,
@@ -37,5 +38,6 @@ app.use("/login", require("./routes/login"));
 app.use("/register", require("./routes/register"));
 app.use("/questions", require("./routes/questions"));
 app.use("/admin", require("./routes/admin"));
+app.use("/results", require("./routes/results"))
 
 module.exports = app;
