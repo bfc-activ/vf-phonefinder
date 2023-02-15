@@ -1,9 +1,9 @@
-const { get, remove } = require('../services/users')
+const { getAll, remove } = require('../services/users')
 
 module.exports = {
     get: async (req, res, next) => {
         try {
-            res.send(await get())
+            res.send(await getAll())
         } catch (err) {
             console.error(`Error while getting user`, err.message)
             next(err)
