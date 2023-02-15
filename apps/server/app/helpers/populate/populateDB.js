@@ -1,3 +1,5 @@
+const bcrypt = require('bcrypt')
+
 const mongoose = require('mongoose')
 // Future proofing setting
 mongoose.set('strictQuery', false)
@@ -17,24 +19,57 @@ const connect = async () => {
     }
 }
 
+const populateAnswers = async () => {
+    console.log('populating answers')
+    const answerData = require('../../models/sampleData/allAnswers.json')
+    await Answer.insertMany(answerData.answers)
+    console.log('ok')
+}
+
+const populateQuestions = async () => {
+    console.log('populating questions')
+    const questionData = require('../../models/sampleData/allQuestions.json')
+    await Question.insertMany(questionData.questions)
+    console.log('ok')
+}
+
+const populateUsers = async () => {
+    console.log('populating users')
+    const User = require('../../models/user')
+
+    const adminPassword = process.argv[2]
+    const adminHashedPassword = await bcrypt.hash(adminPassword, 10)
+    const adminUser = {
+        email: 'admin@email.com',
+        name: 'admin',
+        password: adminHashedPassword,
+        isAdmin: true
+    }
+
+    const userPassword = process.argv[3]
+    const userHashedPassword = await bcrypt.hash(userPassword, 10)
+    const user = {
+        email: 'user@email.com',
+        name: 'user',
+        password: userHashedPassword
+    }
+
+    await User.create(user)
+    await User.create(adminUser)
+
+    console.log('ok')
+}
+
+const populateDB = async () => {
+    // await populateAnswers()
+    // await populateQuestions()
+    await populateUsers()
+}
+
 connect().then(() => {
     populateDB().then(() => {
         console.log('done')
     })
 })
-
-const populateDB = async () => {
-    console.log('populating answers')
-    const answerData = require('../../models/sampleData/allAnswers.json')
-    await Answer.insertMany(answerData.answers)
-    console.log('ok')
-
-    console.log('populating questions')
-    const questionData = require('../../models/sampleData/allQuestions.json')
-    await Question.insertMany(questionData.questions)
-    console.log('ok')
-
-    // const User = require('../../models/user')
-}
 
 module.exports = { populateDB }
