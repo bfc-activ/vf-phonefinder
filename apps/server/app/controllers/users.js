@@ -1,7 +1,7 @@
-const { getAll, remove } = require('../services/users')
+const { getAll, deleteById } = require('../services/users')
 
 module.exports = {
-    get: async (req, res, next) => {
+    getAll: async (req, res, next) => {
         try {
             res.send(await getAll())
         } catch (err) {
@@ -9,9 +9,9 @@ module.exports = {
             next(err)
         }
     },
-    remove: async (req, res, next) => {
+    removeById: async (req, res, next) => {
         try {
-            res.send(await remove())
+            res.send(await deleteById(req.params))
         } catch (err) {
             console.error(`Error while deleting user`, err.message)
             next(err)

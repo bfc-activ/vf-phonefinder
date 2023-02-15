@@ -4,7 +4,7 @@ module.exports = {
     getAll: async () => {
         return Users.find()
     },
-    remove: async () => {
-        return "delete user"
+    deleteById: async (params) => {
+        return Users.deleteOne({ _id: params.userId })
     }
 }
