@@ -12,6 +12,8 @@ import { useNavigate } from "react-router-dom";
 type User = {
   name: string;
   email: string;
+  isAdmin: boolean;
+  id: string;
 };
 
 interface ICurrentUser {

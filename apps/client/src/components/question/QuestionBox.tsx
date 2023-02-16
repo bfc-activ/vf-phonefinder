@@ -22,8 +22,8 @@ interface QuestionBoxProps {
 
 const QuestionBox = ({
   answers,
-  title,
-  order,
+  displayText,
+  _id: order,
   type,
   questionCount,
 }: Question & QuestionBoxProps) => {
@@ -46,7 +46,7 @@ const QuestionBox = ({
           <Text color="gray.500">
             Question {order}/{questionCount}
           </Text>
-          <Heading size="lg">{title}</Heading>
+          <Heading size="lg">{displayText}</Heading>
         </VStack>
 
         {/* Render the Slider answer option if the question type is "slider" */}
@@ -61,7 +61,7 @@ const QuestionBox = ({
           >
             {answers.map((answer, i) => (
               <SliderMark key={i} value={i} mt={3} ml={-2.5}>
-                {answer.displayName}
+                {answer.displayText}
               </SliderMark>
             ))}
 
@@ -79,15 +79,15 @@ const QuestionBox = ({
         <SimpleGrid {...group} spacing={4} columns={2}>
           {type === "single_choice" &&
             answers?.map((answer) => {
-              const radio = getRadioProps({ value: answer.tagId });
+              const radio = getRadioProps({ value: answer._id });
               return (
                 <AnswerBox
                   image={answer.photoURL || undefined}
-                  value={answer.tagId}
-                  key={answer.tagId}
+                  value={answer._id}
+                  key={answer._id}
                   {...radio}
                 >
-                  {answer.displayName}
+                  {answer.displayText}
                 </AnswerBox>
               );
             })}

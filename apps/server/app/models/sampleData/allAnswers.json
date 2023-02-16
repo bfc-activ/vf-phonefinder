@@ -1,0 +1,252 @@
+{
+  "answers": [
+    {
+      "_id": "brand_any",
+      "displayText": "I'm open to ideas",
+      "position": 1
+    },
+    {
+      "_id": "brand_apple",
+      "displayText": "Apple",
+      "photoURL": "",
+      "position": 2
+    },
+    {
+      "_id": "brand_samsung",
+      "displayText": "Samsung",
+      "photoURL": "",
+      "position": 3
+    },
+    {
+      "_id": "brand_google",
+      "displayText": "Google",
+      "photoURL": "",
+      "position": 4
+    },
+    {
+      "_id": "brand_motorola",
+      "displayText": "Motorola",
+      "photoURL": "",
+      "position": 5
+    },
+    {
+      "_id": "brand_nokia",
+      "displayText": "Nokia",
+      "photoURL": "",
+      "position": 6
+    },
+    {
+      "_id": "brand_xiaomi",
+      "displayText": "Xiaomi",
+      "photoURL": "",
+      "position": 7
+    },
+    {
+      "_id": "brand_oppo",
+      "displayText": "Oppo",
+      "photoURL": "",
+      "position": 8
+    },
+    {
+      "_id": "brand_sony",
+      "displayText": "Sony",
+      "photoURL": "",
+      "position": 9
+    },
+    {
+      "_id": "price_low",
+      "displayText": "Basic and low cost",
+      "position": 1
+    },
+    {
+      "_id": "price_low_to_mid",
+      "displayText": "",
+      "position": 2
+    },
+    {
+      "_id": "price_mid",
+      "displayText": "Mid-level",
+      "position": 3
+    },
+    {
+      "_id": "price_mid_to_high",
+      "displayText": "",
+      "position": 4
+    },
+    {
+      "_id": "price_high",
+      "displayText": "Very latest tech",
+      "position": 5
+    },
+    {
+      "_id": "usage_messaging",
+      "displayText": "Using messaging apps",
+      "position": 1
+    },
+    {
+      "_id": "usage_browsing",
+      "displayText": "Browsing, emails and shopping",
+      "position": 2
+    },
+    {
+      "_id": "usage_audio",
+      "displayText": "Streaming music or podcasts",
+      "position": 3
+    },
+    {
+      "_id": "usage_video",
+      "displayText": "Watching videos, TV or movies",
+      "position": 4
+    },
+    {
+      "_id": "usage_live",
+      "displayText": "Streaming sports",
+      "position": 5
+    },
+    {
+      "_id": "usage_social",
+      "displayText": "Social media browsing and sharing",
+      "position": 6
+    },
+    {
+      "_id": "usage_maps",
+      "displayText": "Maps and GPS",
+      "position": 7
+    },
+    {
+      "_id": "usage_travel",
+      "displayText": "Travel abroad",
+      "position": 8
+    },
+    {
+      "_id": "usage_hotspot",
+      "displayText": "As a data hotspot for other devices",
+      "position": 9
+    },
+    {
+      "_id": "usage_gaming",
+      "displayText": "Gaming on the go",
+      "position": 10
+    },
+    {
+      "_id": "usage_none",
+      "displayText": "None of these, just calls and texts",
+      "position": 11
+    },
+    {
+      "_id": "camera_low",
+      "displayText": "Don't mind",
+      "position": 1
+    },
+    {
+      "_id": "camera_low_to_mid",
+      "displayText": "",
+      "position": 2
+    },
+    {
+      "_id": "camera_mid",
+      "displayText": "Important",
+      "position": 3
+    },
+    {
+      "_id": "camera_mid_to_high",
+      "displayText": "",
+      "position": 4
+    },
+    {
+      "_id": "camera_high",
+      "displayText": "Essential",
+      "position": 5
+    },
+    {
+      "_id": "battery_low",
+      "displayText": "Don't mind",
+      "position": 1
+    },
+    {
+      "_id": "battery_low_to_mid",
+      "displayText": "",
+      "position": 2
+    },
+    {
+      "_id": "battery_mid",
+      "displayText": "Important",
+      "position": 3
+    },
+    {
+      "_id": "battery_mid_to_high",
+      "displayText": "",
+      "position": 4
+    },
+    {
+      "_id": "battery_high",
+      "displayText": "Essential",
+      "position": 5
+    },
+    {
+      "_id": "water_low",
+      "displayText": "Don't mind",
+      "position": 1
+    },
+    {
+      "_id": "water_low_to_mid",
+      "displayText": "",
+      "position": 2
+    },
+    {
+      "_id": "water_mid",
+      "displayText": "Important",
+      "position": 3
+    },
+    {
+      "_id": "water_mid_to_high",
+      "displayText": "",
+      "position": 4
+    },
+    {
+      "_id": "water_high",
+      "displayText": "Essential",
+      "position": 5
+    },
+    {
+      "_id": "5G_low",
+      "displayText": "Don't mind",
+      "position": 1
+    },
+    {
+      "_id": "5G_low_to_mid",
+      "displayText": "",
+      "position": 2
+    },
+    {
+      "_id": "5G_mid",
+      "displayText": "Important",
+      "position": 3
+    },
+    {
+      "_id": "5G_mid_to_high",
+      "displayText": "",
+      "position": 4
+    },
+    {
+      "_id": "5G_high",
+      "displayText": "Essential",
+      "position": 5
+    },
+    {
+      "_id": "size_big",
+      "displayText": "Yes, the bigger the better",
+      "position": 1
+    },
+    {
+      "_id": "size_standard",
+      "displayText": "No, I’d like a standard size",
+      "position": 2
+    },
+    {
+      "_id": "size_small_or_any",
+      "displayText": "I don’t mind",
+      "position": 3
+    }
+  ]
+}

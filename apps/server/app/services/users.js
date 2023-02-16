@@ -1,8 +1,10 @@
+const Users = require('../models/user')
+
 module.exports = {
-    get: async () => {
-        return "get user"
+    getAll: async () => {
+        return Users.find()
     },
-    remove: async () => {
-        return "delete user"
+    deleteById: async (params) => {
+        return Users.deleteOne({ _id: params.userId })
     }
 }

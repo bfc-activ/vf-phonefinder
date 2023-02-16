@@ -25,8 +25,7 @@ module.exports = {
     const userInstance = await UserModel.create({
       email: body.email,
       name: body.name,
-      password: hashedPassword,
-      isAdmin: false,
+      password: hashedPassword
     });
 
     // redact password from confirmation object
