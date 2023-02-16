@@ -11,7 +11,7 @@ const Question = () => {
   const { questions, isLoading } = useQuestions();
 
   // Find the question by the id in the url.
-  const question = questions?.find((question) => question.order === Number(id));
+  const question = questions?.find((question) => question._id === Number(id));
 
   // The final question id is the length of the questions array.
   const finalQuestionId = questions?.length;
@@ -21,11 +21,11 @@ const Question = () => {
     if (!question) return;
 
     // If the question is the last one, navigate to the conclusion page
-    if (question?.order === finalQuestionId) {
+    if (question?._id === finalQuestionId) {
       navigate("/question/conclude");
     } else {
       // otherwise, navigate to the next question.
-      navigate(`/question/${question.order + 1}`);
+      navigate(`/question/${question._id + 1}`);
     }
   };
 
