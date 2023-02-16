@@ -1,11 +1,11 @@
 export type Question = {
-  order: number;
-  title: string;
+  _id: string;
+  displayText: string;
   type: "single_choice" | "slider" | "multiple_choice";
   answers: Array<{
-    displayName: string;
+    displayText: string;
     photoURL?: string;
-    tagId: string;
+    position: number;
   }>;
 };
 

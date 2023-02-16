@@ -2,14 +2,12 @@ import {
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
-  Td,
-  TableCaption,
   TableContainer,
   TableContainerProps,
 } from "@chakra-ui/react";
+import { ReactNode } from "react";
 
 const DataTable = ({
   headings,
@@ -17,13 +15,7 @@ const DataTable = ({
   containerProps,
 }: {
   headings: { title: string; isNumeric?: boolean }[];
-  bodyData: {
-    data: {
-      text: string;
-      isNumeric?: boolean;
-    }[];
-    isNumeric?: boolean;
-  }[];
+  bodyData: ReactNode;
   containerProps: TableContainerProps;
 }) => {
   return (
@@ -38,17 +30,7 @@ const DataTable = ({
             ))}
           </Tr>
         </Thead>
-        <Tbody>
-          {bodyData.map((row, index) => (
-            <Tr key={index}>
-              {row.data.map((cell, index) => (
-                <Td key={index} isNumeric={cell.isNumeric}>
-                  {cell.text}
-                </Td>
-              ))}
-            </Tr>
-          ))}
-        </Tbody>
+        <Tbody>{bodyData}</Tbody>
       </Table>
     </TableContainer>
   );
