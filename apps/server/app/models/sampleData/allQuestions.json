@@ -13,7 +13,8 @@
         "brand_motorola",
         "brand_nokia",
         "brand_xiaomi",
-        "brand_oppo"
+        "brand_oppo",
+        "brand_sony"
       ]
     },
     {
@@ -44,7 +45,7 @@
         "usage_maps",
         "usage_travel",
         "usage_hotspot",
-        "usage_gaming",
+        "usage_gaming"
       ]
     },
     {
