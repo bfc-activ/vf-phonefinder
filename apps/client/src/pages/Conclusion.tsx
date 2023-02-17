@@ -22,6 +22,7 @@ import {
   MdSdCard,
   MdShoppingCart,
 } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Conclusion = () => {
   const { phone } = useQuestions();
@@ -100,7 +101,9 @@ const Conclusion = () => {
       </SimpleGrid>
 
       <Flex my={32} justify="center">
-        <Button variant="ghost">Take the quiz again</Button>
+        <Link to="/">
+          <Button variant="ghost">Take the quiz again</Button>
+        </Link>
       </Flex>
     </Box>
   );
