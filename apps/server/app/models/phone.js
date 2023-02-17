@@ -4,7 +4,8 @@ const Schema = mongoose.Schema
 const PhoneSchema = new Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        unique: true  // doesn't work for some reason?
     },
     price: {
         type: Number,
@@ -15,7 +16,7 @@ const PhoneSchema = new Schema({
         required: true
     },
     photoURL: {
-        type: Number,
+        type: String,
         required: true
     },
     operatingSystem: {
