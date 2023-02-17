@@ -13,9 +13,6 @@
       "answers": [
         "brand_any",
         "brand_apple",
-        "price_low",
-        "price_low_to_mid",
-        "price_mid",
         "price_mid_to_high",
         "price_high",
         "usage_messaging",
@@ -64,9 +61,6 @@
       "answers": [
         "brand_any",
         "brand_apple",
-        "price_low",
-        "price_low_to_mid",
-        "price_mid",
         "price_mid_to_high",
         "price_high",
         "usage_messaging",
@@ -162,9 +156,6 @@
       "answers": [
         "brand_any",
         "brand_samsung",
-        "price_low",
-        "price_low_to_mid",
-        "price_mid",
         "price_mid_to_high",
         "price_high",
         "usage_messaging",
@@ -213,9 +204,6 @@
       "answers": [
         "brand_any",
         "brand_samsung",
-        "price_low",
-        "price_low_to_mid",
-        "price_mid",
         "price_mid_to_high",
         "price_high",
         "usage_messaging",
@@ -409,9 +397,6 @@
       "answers": [
         "brand_any",
         "brand_xiaomi",
-        "price_low",
-        "price_low_to_mid",
-        "price_mid",
         "price_mid_to_high",
         "price_high",
         "usage_messaging",
