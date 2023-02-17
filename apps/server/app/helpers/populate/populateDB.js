@@ -69,7 +69,7 @@ const populatePhones = async () => {
 }
 
 const populateDB = async () => {
-    // await populateAnswers()
+    // await populateAnswers()  // this must be done before the others
     // await populateQuestions()
     // await populateUsers()
     // await populatePhones()
