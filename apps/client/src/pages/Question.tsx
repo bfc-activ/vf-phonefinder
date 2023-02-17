@@ -56,39 +56,6 @@ const Question = () => {
     }
   };
 
-  // If there is a tag that starts with "brand_", then they have answered the brand question.
-  const hasAnsweredBrandQuestion = tags.some((tag) => tag.startsWith("brand_"));
-  // If there is a tag that starts with "price_", then they have answered the price question.
-  const hasAnsweredProductQuestion = tags.some((tag) =>
-    tag.startsWith("price_")
-  );
-  // If there is a tag that starts with "usage_", then they have answered the usage question.
-  const hasAnsweredUsageQuestion = tags.some((tag) => tag.startsWith("usage_"));
-  // If there is a tag that starts with "camera_", then they have answered the camera question.
-  const hasAnsweredCameraQuestion = tags.some((tag) =>
-    tag.startsWith("camera_")
-  );
-  // If there is a tag that starts with "battery_", then they have answered the battery question.
-  const hasAnsweredBatteryQuestion = tags.some((tag) =>
-    tag.startsWith("battery_")
-  );
-  // If there is a tag that starts with "water_", then they have answered the water protection question.
-  const hasAnsweredWaterQuestion = tags.some((tag) => tag.startsWith("water_"));
-  // If there is a tag that starts with "size_", then they have answered the screen question.
-  const hasAnsweredScreenQuestion = tags.some((tag) => tag.startsWith("size_"));
-  // If there is a tag that starts with "5G_", then they have answered the 5G question.
-  const hasAnswered5GQuestion = tags.some((tag) => tag.startsWith("5G_"));
-
-  // If they have answered all the questions, then they can submit their answers.
-  const canSubmitAnswers =
-    hasAnsweredBrandQuestion &&
-    hasAnsweredProductQuestion &&
-    hasAnsweredUsageQuestion &&
-    hasAnsweredCameraQuestion &&
-    hasAnsweredBatteryQuestion &&
-    hasAnsweredWaterQuestion &&
-    hasAnswered5GQuestion;
-
   return (
     <Box>
       <Flex pt={24} align="center" justify="center">
@@ -100,10 +67,7 @@ const Question = () => {
 
       <Flex mt={24} mb={24} justify="center">
         {isFinalQuestion ? (
-          <Button
-            isDisabled={!isOnline || !canSubmitAnswers}
-            onClick={onSubmitAnswers}
-          >
+          <Button isDisabled={!isOnline} onClick={onSubmitAnswers}>
             {isOnline ? "Submit answers" : "You need to be online to submit"}
           </Button>
         ) : (
