@@ -8,6 +8,7 @@ mongoose.set('strict', 'throw')  // throw errors when schema validation fails
 const Answer = require('../../models/answer')
 const Question = require('../../models/question')
 const User = require('../../models/user')
+const Phone = require('../../models/phone')
 
 const connect = async () => {
     try {
@@ -60,10 +61,18 @@ const populateUsers = async () => {
     console.log('ok')
 }
 
+const populatePhones = async () => {
+    console.log('populating phones')
+    const phonesData = require('../../models/sampleData/allPhones.json')
+    await Phone.insertMany(phonesData.phones)
+    console.log('ok')
+}
+
 const populateDB = async () => {
-    await populateAnswers()
-    await populateQuestions()
-    await populateUsers()
+    // await populateAnswers()
+    // await populateQuestions()
+    // await populateUsers()
+    await populatePhones()
 }
 
 connect().then(() => {
