@@ -1,7 +1,7 @@
 const resultsService = require('../services/results')
 
 module.exports = {
-    post: async (req, res, next) => {
+    submit: async (req, res, next) => {
         try {
             // Note: API only handles 1 result rather than an array of results.
             //       Can be added in a future version.

@@ -1,13 +1,16 @@
 const Results = require('../models/result')
+const phoneService = require('../services/phones')
 require('../models/user')
 require('../models/answer')
 
 module.exports = {
     submit: async (body) => {
-        return Results.create({
+        const newResult = await Results.create({
             user: body.user,
             answers: body.answers
         })
+        console.log(`New result created:\n${newResult}`)
+        return phoneService.findPhoneByAnswers(body)  // return the phone recommendation
     },
     findAll: async () => {
         return Results.find().populate('user').populate('answers')
