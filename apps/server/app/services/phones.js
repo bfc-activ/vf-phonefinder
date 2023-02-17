@@ -6,7 +6,7 @@ module.exports = {
         return Phones.find().populate('answers')
     },
     findPhoneByAnswers: async (body) => {
-        return Phones.aggregate([
+        const phone = await Phones.aggregate([
             {
                 $addFields: {
                     matchingAnswers: {
@@ -22,8 +22,9 @@ module.exports = {
                 }
             },
             {
-                $limit: 1
+                $limit: 1  // still returns an array
             }
         ])
+        return phone[0]  // return only 1
     }
 }
