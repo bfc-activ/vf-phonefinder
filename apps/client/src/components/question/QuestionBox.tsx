@@ -15,6 +15,8 @@ import {
 import AnswerBox from "./AnswerBox";
 import { Question } from "../../types/Questions";
 import { useState } from "react";
+import MultiChoiceAnswerBox from "./MutliChoiceAnswerBox";
+import useQuestions from "@hooks/useQuestions";
 
 interface QuestionBoxProps {
   questionCount: number;
@@ -27,17 +29,49 @@ const QuestionBox = ({
   type,
   questionCount,
 }: Question & QuestionBoxProps) => {
+  const { addTag, removeTag, tags } = useQuestions();
+
+  const onRadioChange = (value: string) => {
+    setCheckedValues([value]);
+    // Remove all the tags in the answers
+    answers.forEach((answer) => removeTag(answer._id));
+    // Add the tag of the selected answer
+    addTag(value);
+  };
+
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "option",
     defaultValue: "",
     // eslint-disable-next-line no-console
-    onChange: console.log,
+    onChange: onRadioChange,
   });
 
   const group = getRootProps();
 
   // Local state for the slider value changes
   const [sliderValue, setSliderValue] = useState(1);
+  // Local state for the checkbox value changes
+  const [checkedValues, setCheckedValues] = useState<string[]>([]);
+
+  // Handle the slider value change
+  const onSliderChange = (value: number) => {
+    setSliderValue(value);
+    // Remove all the tags in the answers
+    answers.forEach((answer) => removeTag(answer._id));
+    // Add the tag of the selected answer
+    addTag(answers[value]._id);
+  };
+
+  // Handle the checkbox value change
+  const onCheckboxChange = (value: string, checked: boolean) => {
+    if (checked) {
+      setCheckedValues([...checkedValues, value]);
+      addTag(value);
+    } else {
+      setCheckedValues(checkedValues.filter((v) => v !== value));
+      removeTag(value);
+    }
+  };
 
   return (
     <SlideFade in>
@@ -57,10 +91,10 @@ const QuestionBox = ({
             max={answers.length - 1} // Take away one because the index starts at 0
             colorScheme="brand"
             value={sliderValue}
-            onChange={(v) => setSliderValue(v)}
+            onChange={(v) => onSliderChange(v)}
           >
             {answers.map((answer, i) => (
-              <SliderMark key={i} value={i} mt={3} ml={-2.5}>
+              <SliderMark key={i} value={i} mt={3} ml={-2.5} minWidth="150px">
                 {answer.displayText}
               </SliderMark>
             ))}
@@ -75,7 +109,7 @@ const QuestionBox = ({
           </Slider>
         )}
 
-        {/* Render the single or multiple choice answers based on the question type */}
+        {/* Render the single answers based on the question type */}
         <SimpleGrid {...group} spacing={4} columns={2}>
           {type === "single_choice" &&
             answers?.map((answer) => {
@@ -89,6 +123,26 @@ const QuestionBox = ({
                 >
                   {answer.displayText}
                 </AnswerBox>
+              );
+            })}
+        </SimpleGrid>
+
+        {/* Render the multiple choice answers based on the question type */}
+        <SimpleGrid {...group} spacing={4} columns={2}>
+          {type === "multiple_choice" &&
+            answers?.map((answer) => {
+              return (
+                <MultiChoiceAnswerBox
+                  image={answer.photoURL || undefined}
+                  value={answer._id}
+                  key={answer._id}
+                  isChecked={checkedValues.includes(answer._id)}
+                  onChange={(e) =>
+                    onCheckboxChange(e.target.value, e.target.checked)
+                  }
+                >
+                  {answer.displayText}
+                </MultiChoiceAnswerBox>
               );
             })}
         </SimpleGrid>

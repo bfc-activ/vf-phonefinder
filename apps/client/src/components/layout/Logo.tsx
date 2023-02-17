@@ -18,8 +18,12 @@ const Logo = (props: { withVFLogo?: boolean } & ImageProps) => {
   if (props.withVFLogo) {
     return (
       <Flex align="center">
-        <Image src="/img/vodafone.svg" width="45px" alt="Vodafone Logo" />
-        <Center mx={4} height="40px">
+        <Image
+          src="/img/vodafone.svg"
+          width={{ base: "35px", lg: "45px" }}
+          alt="Vodafone Logo"
+        />
+        <Center mx={{ base: 2, lg: 4 }} height={{ base: "25px", lg: "40px" }}>
           <Divider orientation="vertical" />
         </Center>
         <Image src={logoSource} {...props} alt="Phone Finder Logo" />

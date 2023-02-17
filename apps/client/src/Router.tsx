@@ -32,7 +32,7 @@ const Router = () => {
           element: <Admin />,
         },
         {
-          path: "/question/conclude",
+          path: "/results",
           element: <Conclusion />,
         },
         {

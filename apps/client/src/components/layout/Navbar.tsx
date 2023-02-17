@@ -144,7 +144,7 @@ const Navbar = () => {
               justify="space-between"
             >
               <Link to="/">
-                <Logo withVFLogo width="170px" />
+                <Logo withVFLogo width={{ base: "130px", lg: "170px" }} />
               </Link>
             </Flex>
 

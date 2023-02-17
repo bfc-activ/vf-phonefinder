@@ -1,28 +1,25 @@
 import {
   Box,
   Flex,
-  Heading,
-  Image,
-  UseRadioProps,
-  useRadio,
   useCheckbox,
+  chakra,
   UseCheckboxProps,
   Text,
-  chakra,
+  Image,
+  Heading,
 } from "@chakra-ui/react";
 
-const AnswerBox = (
-  props: ({ image?: string; children: string } & UseRadioProps) | undefined
+const MultiChoiceAnswerBox = (
+  props: ({ image?: string; children: string } & UseCheckboxProps) | undefined
 ) => {
-  const { getInputProps, getCheckboxProps } = useRadio(props);
-  const input = getInputProps();
-  const checkbox = getCheckboxProps();
+  const { state, getCheckboxProps, getInputProps, getLabelProps, htmlProps } =
+    useCheckbox(props);
 
   return (
-    <Box as="label">
-      <input {...input} />
-      <Box
-        {...checkbox}
+    <Box {...htmlProps} as="label">
+      <input {...getInputProps()} hidden />
+      <Flex
+        {...getCheckboxProps()}
         _checked={{
           bg: "red.600",
           color: "white",
@@ -62,9 +59,9 @@ const AnswerBox = (
             {props?.children}
           </Heading>
         </Flex>
-      </Box>
+      </Flex>
     </Box>
   );
 };
 
-export default AnswerBox;
+export default MultiChoiceAnswerBox;
