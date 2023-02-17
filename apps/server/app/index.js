@@ -4,12 +4,14 @@ const logger = require("morgan");
 const passport = require("passport");
 const bodyParser = require("body-parser");
 const errorHandler = require("./middleware/errorHandler");
+const rateLimiter = require("./middleware/rateLimiter")
 
 require("dotenv").config();
 
 const app = express();
 
 // Middleware
+app.use(rateLimiter)
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
