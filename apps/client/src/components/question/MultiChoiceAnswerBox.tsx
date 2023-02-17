@@ -2,9 +2,7 @@ import {
   Box,
   Flex,
   useCheckbox,
-  chakra,
   UseCheckboxProps,
-  Text,
   Image,
   Heading,
 } from "@chakra-ui/react";
@@ -12,8 +10,7 @@ import {
 const MultiChoiceAnswerBox = (
   props: ({ image?: string; children: string } & UseCheckboxProps) | undefined
 ) => {
-  const { state, getCheckboxProps, getInputProps, getLabelProps, htmlProps } =
-    useCheckbox(props);
+  const { getCheckboxProps, getInputProps, htmlProps } = useCheckbox(props);
 
   return (
     <Box {...htmlProps} as="label">

@@ -15,7 +15,7 @@ import {
 import AnswerBox from "./AnswerBox";
 import { Question } from "../../types/Questions";
 import { useState } from "react";
-import MultiChoiceAnswerBox from "./MutliChoiceAnswerBox";
+import MultiChoiceAnswerBox from "./MultiChoiceAnswerBox";
 import useQuestions from "@hooks/useQuestions";
 
 interface QuestionBoxProps {
@@ -91,7 +91,7 @@ const QuestionBox = ({
             max={answers.length - 1} // Take away one because the index starts at 0
             colorScheme="brand"
             value={sliderValue}
-            onChange={(v) => onSliderChange(v)}
+            onChange={(v: number) => onSliderChange(v)}
           >
             {answers.map((answer, i) => (
               <SliderMark key={i} value={i} mt={3} ml={-2.5} minWidth="150px">
@@ -137,9 +137,9 @@ const QuestionBox = ({
                   value={answer._id}
                   key={answer._id}
                   isChecked={checkedValues.includes(answer._id)}
-                  onChange={(e) =>
-                    onCheckboxChange(e.target.value, e.target.checked)
-                  }
+                  onChange={(e: {
+                    target: { value: string; checked: boolean };
+                  }) => onCheckboxChange(e.target.value, e.target.checked)}
                 >
                   {answer.displayText}
                 </MultiChoiceAnswerBox>
