@@ -72,7 +72,7 @@ const populateDB = async () => {
     // await populateAnswers()
     // await populateQuestions()
     // await populateUsers()
-    await populatePhones()
+    // await populatePhones()
 }
 
 connect().then(() => {
