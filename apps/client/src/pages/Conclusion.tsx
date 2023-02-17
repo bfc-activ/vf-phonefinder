@@ -11,6 +11,8 @@ import {
   Stack,
   Text,
   Icon,
+  Card,
+  CardBody,
 } from "@chakra-ui/react";
 import useQuestions from "@hooks/useQuestions";
 import {
@@ -40,67 +42,71 @@ const Conclusion = () => {
         </Heading>
       </Stack>
 
-      <SimpleGrid mt={12} columns={{ base: 1, lg: 2 }}>
-        <Image src={phone.photoURL} alt={phone.name} width="250px" />
-        <Box mt={12}>
-          <Heading size="lg">{phone.name}</Heading>
-          <Text color="gray.500" mt={4}>
-            {phone.description}
-          </Text>
-
-          <List mt={6} spacing={2}>
-            <ListItem>
-              <ListIcon
-                as={MdOutline5G}
-                color={phone.is5GCompatible ? "green.500" : "red.500"}
-              />
-              {phone.is5GCompatible ? "5G Compatible" : "Not 5G Compatible"}
-            </ListItem>
-            <ListItem>
-              <ListIcon
-                as={MdChargingStation}
-                color={phone.hasWirelessCharging ? "green.500" : "red.500"}
-              />
-              {phone.hasWirelessCharging
-                ? "Supports Wireless Charging"
-                : "No Wireless Charging"}
-            </ListItem>
-            <ListItem>
-              <ListIcon as={MdMemory} />
-              {phone.operatingSystem}
-            </ListItem>
-            <ListItem>
-              <ListIcon as={MdSdCard} />
-              {phone.storageCapacityGB} GB Storage
-            </ListItem>
-            <ListItem>
-              <ListIcon as={MdScreenshot} />
-              {phone.screenSizeInch} inch Screen
-            </ListItem>
-          </List>
-
-          <Flex mt={6} align="center" justify="space-between">
-            <Flex align="flex-end">
-              <Text mr={2}>£</Text>
-              <Text fontSize="5xl" height="60px">
-                {phone.price}
+      <Card mt={12}>
+        <CardBody>
+          <SimpleGrid columns={{ base: 1, lg: 2 }}>
+            <Image src={phone.photoURL} alt={phone.name} width="250px" />
+            <Box mt={4}>
+              <Heading size="lg">{phone.name}</Heading>
+              <Text color="gray.500" mt={4}>
+                {phone.description}
               </Text>
-            </Flex>
 
-            <a href={phone.purchaseURL} target="_blank" rel="noreferrer">
-              <Button
-                leftIcon={<Icon as={MdShoppingCart} />}
-                fontWeight="bold"
-                mt={1}
-              >
-                Order via Vodafone UK
-              </Button>
-            </a>
-          </Flex>
-        </Box>
-      </SimpleGrid>
+              <List mt={6} spacing={2}>
+                <ListItem>
+                  <ListIcon
+                    as={MdOutline5G}
+                    color={phone.is5GCompatible ? "green.500" : "red.500"}
+                  />
+                  {phone.is5GCompatible ? "5G Compatible" : "Not 5G Compatible"}
+                </ListItem>
+                <ListItem>
+                  <ListIcon
+                    as={MdChargingStation}
+                    color={phone.hasWirelessCharging ? "green.500" : "red.500"}
+                  />
+                  {phone.hasWirelessCharging
+                    ? "Supports Wireless Charging"
+                    : "No Wireless Charging"}
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={MdMemory} />
+                  {phone.operatingSystem}
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={MdSdCard} />
+                  {phone.storageCapacityGB} GB Storage
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={MdScreenshot} />
+                  {phone.screenSizeInch} inch Screen
+                </ListItem>
+              </List>
 
-      <Flex my={32} justify="center">
+              <Flex mt={6} align="center" justify="space-between">
+                <Flex align="flex-end">
+                  <Text>£</Text>
+                  <Text fontSize="5xl" height="60px">
+                    {phone.price}
+                  </Text>
+                </Flex>
+
+                <a href={phone.purchaseURL} target="_blank" rel="noreferrer">
+                  <Button
+                    leftIcon={<Icon as={MdShoppingCart} />}
+                    fontWeight="bold"
+                    mt={1}
+                  >
+                    Order via Vodafone UK
+                  </Button>
+                </a>
+              </Flex>
+            </Box>
+          </SimpleGrid>
+        </CardBody>
+      </Card>
+
+      <Flex mb={32} mt={16} justify="center">
         <Link to="/">
           <Button variant="ghost">Take the quiz again</Button>
         </Link>
