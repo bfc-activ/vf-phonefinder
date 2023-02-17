@@ -20,7 +20,6 @@ app.use(
     methods: "GET,POST,PUT,DELETE",
   })
 );
-app.use(errorHandler);
 
 app.use(
   bodyParser.urlencoded({
@@ -39,5 +38,9 @@ app.use("/register", require("./routes/register"));
 app.use("/questions", require("./routes/questions"));
 app.use("/admin", require("./routes/admin"));
 app.use("/results", require("./routes/results"))
+app.use("/phones", require("./routes/phones"))
+
+app.use(errorHandler);
+
 
 module.exports = app;
