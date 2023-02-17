@@ -19,6 +19,10 @@ const PhoneSchema = new Schema({
         type: String,
         required: true
     },
+    purchaseURL: {
+        type: String,
+        required: true
+    },
     operatingSystem: {
         type: String,
         required: true

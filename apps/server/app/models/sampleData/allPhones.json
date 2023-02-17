@@ -10,6 +10,7 @@
       "hasWirelessCharging": true,
       "storageCapacityGB": 128,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Apple_iPhone_14_blue-full-product-front-600.png",
+      "purchaseURL": "https://www.vodafone.co.uk/mobile/phones/pay-monthly-contracts/apple/iphone-14",
       "answers": [
         "brand_any",
         "brand_apple",
@@ -58,6 +59,7 @@
       "hasWirelessCharging": true,
       "storageCapacityGB": 256,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Apple_iPhone_13_Pro_Max_alpine_green-full-product-front-600.png",
+      "purchaseURL": "https://www.vodafone.co.uk/mobile/phones/pay-monthly-contracts/apple/iphone-13-pro-max",
       "answers": [
         "brand_any",
         "brand_apple",
@@ -106,6 +108,7 @@
       "hasWirelessCharging": true,
       "storageCapacityGB": 64,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Apple_iPhone_SE_product_red-full-product-front-600.png",
+      "purchaseURL": "https://www.vodafone.co.uk/mobile/phones/pay-monthly-contracts/apple/iphone-se-2020",
       "answers": [
         "brand_any",
         "brand_apple",
@@ -153,6 +156,7 @@
       "hasWirelessCharging": true,
       "storageCapacityGB": 512,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_S23_Ultra_green-full-product-front-600.png",
+      "purchaseURL": "https://www.vodafone.co.uk/mobile/phones/pay-monthly-contracts/samsung/galaxy-s23-ultra",
       "answers": [
         "brand_any",
         "brand_samsung",
@@ -201,6 +205,7 @@
       "hasWirelessCharging": true,
       "storageCapacityGB": 128,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_Z_Flip4_bora_purple-full-product-front-600.png",
+      "purchaseURL": "https://www.vodafone.co.uk/mobile/phones/pay-monthly-contracts/samsung/galaxy-z-flip4",
       "answers": [
         "brand_any",
         "brand_samsung",
@@ -249,6 +254,7 @@
       "hasWirelessCharging": false,
       "storageCapacityGB": 64,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_A13_black-full-product-front-600.png",
+      "purchaseURL": "https://www.vodafone.co.uk/mobile/phones/pay-monthly-contracts/samsung/galaxy-a13",
       "answers": [
         "brand_any",
         "brand_samsung",
@@ -296,6 +302,7 @@
       "hasWirelessCharging": false,
       "storageCapacityGB": 128,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Google_Pixel_6A_charcoal-full-product-front-600-v2.png",
+      "purchaseURL": "https://www.vodafone.co.uk/business/business-mobile-phones/pay-monthly-contracts/google/pixel-6a",
       "answers": [
         "brand_any",
         "brand_google",
@@ -345,6 +352,7 @@
       "hasWirelessCharging": false,
       "storageCapacityGB": 128,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Sony_Xperia_10_IV_black-full-product-front-600.png",
+      "purchaseURL": "https://www.vodafone.co.uk/mobile/phones/pay-monthly-contracts/sony/xperia-10-iv",
       "answers": [
         "brand_any",
         "brand_sony",
@@ -394,6 +402,7 @@
       "hasWirelessCharging": false,
       "storageCapacityGB": 256,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Xiaomi_12_Pro_gray-full-product-front-600.png",
+      "purchaseURL": "https://www.vodafone.co.uk/mobile/phones/pay-monthly-contracts/xiaomi/12-pro",
       "answers": [
         "brand_any",
         "brand_xiaomi",
@@ -443,6 +452,7 @@
       "hasWirelessCharging": false,
       "storageCapacityGB": 128,
       "photoURL": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Oppo_A54s_crystal_black-full-product-front-600.png",
+      "purchaseURL": "https://www.vodafone.co.uk/mobile/phones/pay-monthly-contracts/oppo/a54s",
       "answers": [
         "brand_any",
         "brand_oppo",
