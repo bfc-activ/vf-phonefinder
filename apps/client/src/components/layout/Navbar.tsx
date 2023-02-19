@@ -79,12 +79,7 @@ const ProfileAvatar = ({
 
 const Navbar = () => {
   const loggedInLinks: NavLinks = [{ title: "Home", to: "/" }];
-  const loggedOutLinks: NavLinks = [
-    { title: "Multiple Choice", to: "/question/1" },
-    { title: "Single Choice", to: "/question/2" },
-    { title: "Slider", to: "/question/3" },
-    { title: "Recommendation", to: "/question/conclude" },
-  ];
+  const loggedOutLinks: NavLinks = [{ title: "Home", to: "/" }];
 
   // Get the current user from the hook
   const { currentUser, logout } = useCurrentUser();

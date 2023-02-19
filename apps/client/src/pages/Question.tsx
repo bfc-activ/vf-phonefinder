@@ -5,13 +5,14 @@ import { useNavigate, useParams } from "react-router-dom";
 import api from "@api/index";
 import useCurrentUser from "@hooks/useCurrentUser";
 import useOnlineStatus from "@hooks/useOnlineStatus";
+import { useEffect } from "react";
 
 const Question = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
   // Loads all the questions from the API.
-  const { questions, isLoading, tags, setPhoneRec, phone, clearCache } =
+  const { questions, isLoading, tags, setPhoneRec, clearCache } =
     useQuestions();
   const { currentUser } = useCurrentUser();
   const isOnline = useOnlineStatus();
@@ -24,6 +25,9 @@ const Question = () => {
 
   // Check if the question is the last one.
   const isFinalQuestion = question?._id === finalQuestionId;
+
+  // Check if the question is the first one.
+  const isFirstQuestion = question?._id === 1;
 
   // Handle the next question transition.
   const onNextQuestion = () => {
@@ -40,21 +44,27 @@ const Question = () => {
 
   const onSubmitAnswers = async () => {
     if (!currentUser) return navigate("/login");
+    const tags = localStorage.getItem("tags");
 
-    const res = await api.post("/results/submit", {
-      answers: tags,
-      user: currentUser.id,
-    });
+    if (!tags) return;
+    const tagsAsArrayOfStrings = JSON.parse(tags);
 
-    if (res.status === 200) {
-      // Clear the cache so that the questions are reloaded.
-      clearCache();
-      // Set the phone recommendation.
-      setPhoneRec(res.data);
-      // Navigate to the results page.
-      navigate("/results");
-    }
+    await api
+      .post("/results/submit", {
+        answers: tagsAsArrayOfStrings,
+        user: currentUser.id,
+      })
+      .then(({ data }) => {
+        // Set the phone recommendation.
+        setPhoneRec(data);
+        // Navigate to the results page.
+        navigate("/results");
+      });
   };
+
+  useEffect(() => {
+    if (isFirstQuestion) return clearCache();
+  }, [isFirstQuestion]);
 
   return (
     <Box>

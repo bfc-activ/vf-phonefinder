@@ -59,7 +59,9 @@ const Admin = () => {
       .then(({ data }) => {
         setUsers(data.users);
         setQuestions(data.questions);
-        setResults(data.results);
+        // Filter where the result user is not null
+        const results = data.results.filter((result: Result) => result.user);
+        setResults(results);
       })
       .catch(() => {
         // Display an error toast

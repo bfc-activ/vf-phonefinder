@@ -14,7 +14,8 @@ const useQuestions = () => {
 
   // Clears the localStorage
   const clearCache = () => {
-    localStorage.clear();
+    setTags([]);
+    localStorage.setItem("tags", JSON.stringify([]));
   };
 
   // Sets the phone rec in state and in localStorage

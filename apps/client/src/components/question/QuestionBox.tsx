@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import AnswerBox from "./AnswerBox";
 import { Question } from "../../types/Questions";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MultiChoiceAnswerBox from "./MultiChoiceAnswerBox";
 import useQuestions from "@hooks/useQuestions";
 
@@ -29,7 +29,7 @@ const QuestionBox = ({
   type,
   questionCount,
 }: Question & QuestionBoxProps) => {
-  const { addTag, removeTag, tags } = useQuestions();
+  const { addTag, removeTag } = useQuestions();
 
   const onRadioChange = (value: string) => {
     setCheckedValues([value]);
@@ -49,7 +49,7 @@ const QuestionBox = ({
   const group = getRootProps();
 
   // Local state for the slider value changes
-  const [sliderValue, setSliderValue] = useState(1);
+  const [sliderValue, setSliderValue] = useState(0);
   // Local state for the checkbox value changes
   const [checkedValues, setCheckedValues] = useState<string[]>([]);
 
@@ -72,6 +72,11 @@ const QuestionBox = ({
       removeTag(value);
     }
   };
+
+  // Set the slider value to 1 on mount
+  useEffect(() => {
+    setSliderValue(0);
+  }, [answers]);
 
   return (
     <SlideFade in>
