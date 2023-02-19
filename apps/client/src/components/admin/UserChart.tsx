@@ -41,7 +41,7 @@ const UserChart = ({ users }: UserChartProps) => {
       <Heading size="md" mb={4} color="gray.500">
         Users registered over time
       </Heading>
-      <LineChart width={500} height={250} data={data}>
+      <LineChart width={360} height={250} data={data}>
         <Line type="monotone" dataKey="users" stroke="#E60000" />
         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
         <XAxis dataKey="date" />

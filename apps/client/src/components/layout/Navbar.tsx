@@ -67,7 +67,7 @@ const ProfileAvatar = ({
       <Avatar size="sm" name={name} />
       <Text
         ml={2}
-        color={useColorModeValue("black", "gray.200")}
+        color={useColorModeValue(isMobile ? "white" : "black", "gray.200")}
         fontSize="md"
         fontWeight="medium"
       >
