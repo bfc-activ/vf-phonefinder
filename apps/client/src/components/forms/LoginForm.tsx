@@ -44,10 +44,12 @@ const LoginForm = () => {
     },
   });
 
-  const { login, loginError, registerMessage } = useCurrentUser();
+  const { login, loginError, registerMessage, setLoginError } =
+    useCurrentUser();
 
   // onSubmit function, which is called when the form is submitted.
   const onSubmit = async (data: { email: string; password: string }) => {
+    setLoginError(null);
     await login(data.email, data.password);
   };
 

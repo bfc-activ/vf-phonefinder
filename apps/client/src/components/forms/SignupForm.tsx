@@ -56,6 +56,7 @@ const SignupForm = () => {
     register: onRegister,
     registerError,
     registerMessage,
+    setLoginError,
   } = useCurrentUser();
   const [registerLoading, setRegisterLoading] = useState<boolean>(false);
 
@@ -65,6 +66,7 @@ const SignupForm = () => {
     email: string;
     password: string;
   }) => {
+    setLoginError(null);
     setRegisterLoading(true);
     await onRegister(data.email, data.password, data.name);
     setRegisterLoading(false);

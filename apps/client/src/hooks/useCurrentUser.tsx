@@ -19,6 +19,7 @@ type User = {
 interface ICurrentUser {
   currentUser: User | null;
   login: (email: string, password: string) => Promise<void>;
+  setLoginError: (error: string | null) => void;
   loginError: string | null;
   register: (email: string, password: string, name: string) => Promise<void>;
   registerError: string | null;
@@ -32,6 +33,7 @@ interface ICurrentUser {
 const CurrentUserContext = createContext<ICurrentUser>({
   currentUser: null,
   login: () => Promise.resolve(),
+  setLoginError: () => null,
   loginError: null,
   register: () => Promise.resolve(),
   registerError: null,
@@ -124,6 +126,7 @@ const useProvideCurrentUser = () => {
     isLoading,
     error,
     loginError,
+    setLoginError,
     registerError,
     registerMessage,
   };
